@@ -1,18 +1,18 @@
 {
-	"name": "sveltekit",
+	"name": "kredeum-template/sveltekit",
 	"version": "0.0.1",
 	"private": true,
 	"scripts": {
-		"dev": "vite dev",
-		"build": "vite build",
-		"preview": "vite preview",
-		"test": "npm run test:integration && npm run test:unit",
-		"check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
-		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
-		"lint": "prettier --check . && eslint .",
 		"format": "prettier --write .",
+		"check:eslint": "prettier --check . && eslint .",
+		"check:svelte": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
+		"check": "pnpm run check:eslint && pnpm run check:svelte",
+		"build": "vite build",
+		"test": "pnpm run test:integration && pnpm run test:unit",
 		"test:integration": "playwright test",
-		"test:unit": "vitest"
+		"test:unit": "vitest",
+		"dev": "vite dev",
+		"preview": "vite preview"
 	},
 	"devDependencies": {
 		"@playwright/test": "^1.28.1",

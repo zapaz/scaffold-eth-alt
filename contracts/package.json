@@ -1,0 +1,18 @@
+{
+  "name": "kredeum-template/contracts",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "format": "forge fmt",
+    "check": "solhint src/**/*.sol",
+    "build": "forge compile",
+    "test": "forge test"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "solhint": "^5.0.1"
+  }
+}
