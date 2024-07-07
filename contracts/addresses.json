@@ -1,0 +1,10 @@
+{
+  "11155111": {
+    "Counter": "0x6aaaA5583A23715DACA1cDCAC98176EE5e27Ff37",
+    "chainName": "sepolia"
+  },
+  "31337": {
+    "Counter": "0x0116686E2291dbd5e317F47faDBFb43B599786Ef",
+    "chainName": "anvil"
+  }
+}

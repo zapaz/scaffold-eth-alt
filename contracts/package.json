@@ -1,13 +1,21 @@
 {
-  "name": "kredeum-template/contracts",
+  "name": "@kredeum-template/contracts",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
+    "chain": "anvil",
     "format": "forge fmt",
     "check": "solhint src/**/*.sol",
     "build": "forge compile",
-    "test": "forge test"
+    "test": "forge test",
+    "deploy:deploy": "pnpm deploy:all --fork-url $CHAIN --account $ACCOUNT --broadcast",
+    "deploy:validate": "pnpm deploy:all --fork-url $CHAIN",
+    "deploy:testnet": "ACCOUNT=$TESTNET_ACCOUNT pnpm deploy:deploy",
+    "deploy:mainnet": "ACCOUNT=$MAINNET_ACCOUNT pnpm deploy:deploy",
+    "deploy:anvil": "export CHAIN=anvil ACCOUNT=$ANVIL_ACCOUNT && pnpm deploy:deploy --password ''",
+    "deploy:sepolia": "CHAIN=sepolia pnpm deploy:testnet",
+    "deploy:all": "forge script script/DeployAll.s.sol"
   },
   "keywords": [],
   "author": "",

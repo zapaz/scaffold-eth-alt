@@ -4,7 +4,13 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "postinstall": "pnpm run build",
+    "chain": "pnpm run --filter contracts chain",
+    "deploy:anvil": "pnpm run --filter contracts deploy:anvil",
+    "deploy:sepolia": "pnpm run --filter contracts deploy:sepolia",
+    "dev": "pnpm run --filter sveltekit dev",
+    "start": "pnpm run dev",
+    "build": "turbo build"
   },
   "keywords": [],
   "author": "",
