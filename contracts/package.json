@@ -9,7 +9,7 @@
     "check": "solhint src/**/*.sol",
     "build": "forge compile",
     "test": "forge test",
-    "deploy:deploy": "pnpm deploy:all --fork-url $CHAIN --account $ACCOUNT --broadcast",
+    "deploy:deploy": "pnpm deploy:all --fork-url $CHAIN --account $ACCOUNT --broadcast --verify",
     "deploy:validate": "pnpm deploy:all --fork-url $CHAIN",
     "deploy:testnet": "ACCOUNT=$TESTNET_ACCOUNT pnpm deploy:deploy",
     "deploy:mainnet": "ACCOUNT=$MAINNET_ACCOUNT pnpm deploy:deploy",

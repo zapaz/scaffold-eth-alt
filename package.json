@@ -4,7 +4,6 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "postinstall": "pnpm run build",
     "chain": "pnpm run --filter contracts chain",
     "deploy:anvil": "pnpm run --filter contracts deploy:anvil",
     "deploy:sepolia": "pnpm run --filter contracts deploy:sepolia",

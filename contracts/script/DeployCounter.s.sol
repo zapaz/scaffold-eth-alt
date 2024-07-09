@@ -6,7 +6,7 @@ import {Counter} from "../src/Counter.sol";
 
 contract DeployCounter is DeployLite {
     function deployCounter() public returns (address) {
-        return deployLite("Counter", abi.encode(42));
+        return deployLite("Counter");
     }
 
     function run() public virtual {
