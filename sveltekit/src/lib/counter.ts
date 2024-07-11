@@ -7,7 +7,7 @@ import {
 	custom
 } from "viem";
 import type { WindowEthereum } from "./types";
- 
+
 import addresses from "@kredeum-template/contracts/addresses.json";
 import { abi } from "@kredeum-template/contracts/out/Counter.sol/Counter.json";
 
@@ -18,6 +18,7 @@ const counter = async (chain: Chain) => {
 	if (!windowEthereum) throw new Error("Ethereum Wallet extension not found");
 
 	const address = addresses[11155111]["Counter"] as Address;
+	console.log("counter ~ address:", address);
 
 	const publicClient = createPublicClient({ chain, transport: custom(windowEthereum) });
 

@@ -13,8 +13,8 @@
     "deploy:validate": "pnpm deploy:all --fork-url $CHAIN",
     "deploy:testnet": "ACCOUNT=$TESTNET_ACCOUNT pnpm deploy:deploy",
     "deploy:mainnet": "ACCOUNT=$MAINNET_ACCOUNT pnpm deploy:deploy",
-    "deploy:anvil": "export CHAIN=anvil ACCOUNT=$ANVIL_ACCOUNT && pnpm deploy:deploy --password ''",
-    "deploy:sepolia": "CHAIN=sepolia pnpm deploy:testnet",
+    "deploy:anvil": "pnpm deploy:all --fork-url anvil --account $ANVIL_ACCOUNT --broadcast --password ''",
+    "deploy:sepolia": "pnpm deploy:all --fork-url sepolia --account $TESTNET_ACCOUNT --broadcast --verify",
     "deploy:all": "forge script script/DeployAll.s.sol"
   },
   "keywords": [],
