@@ -6,7 +6,7 @@ import {YourContract} from "../src/YourContract.sol";
 
 contract DeployYourContract is DeployLite {
     function deployYourContract() public returns (address) {
-        return deployLite("YourContract", abi.encode(msg.sender));
+        return deployLiteImmutable("YourContract", abi.encode(msg.sender));
     }
 
     function run() public virtual {

@@ -3,6 +3,7 @@ import { defineConfig } from "vitest/config";
 
 export default defineConfig({
 	plugins: [sveltekit()],
+	server: { open: true },
 	test: {
 		include: ["src/**/*.{test,spec}.{js,ts}"]
 	}
