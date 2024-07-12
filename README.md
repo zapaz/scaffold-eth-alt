@@ -9,7 +9,7 @@ Comparison of tech stacks:
 | Package Manager        | pnpm                                      | yarn                                    |
 | Task runner        | turborepo                                      | yarn                                    |
 | Language               | typescript                                | typescript                              |
-| Frontend Framework     | svelte                                    | react                                   |
+| Frontend Framework     | svelte5                                    | react                                   |
 | Fullstack Framework    | sveltekit                                 | nextjs                                  |
 | Build Tool             | vite                                      | webpack                                       |
 | Smart Contract Tool    | foundry                                   | hardhat (or foundry)                    |

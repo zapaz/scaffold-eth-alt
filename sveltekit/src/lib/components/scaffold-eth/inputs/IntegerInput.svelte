@@ -3,8 +3,6 @@
 	import { IntegerVariant, type CommonInputProps, isValidInteger } from "./utils";
 
 	let {
-		// I have no idea why ESLint doesn't recognize $bindable
-		// eslint-disable-next-line no-undef
 		value = $bindable(),
 		onchange,
 		name,

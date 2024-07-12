@@ -133,7 +133,7 @@
 		{#if ensName}
 			<div class="flex items-center rounded-l-full bg-base-300">
 				{#if ensAvatar?.isLoading}
-					<div class="skeleton h-[35px] w-[35px] shrink-0 rounded-full bg-base-200" ></div>
+					<div class="skeleton h-[35px] w-[35px] shrink-0 rounded-full bg-base-200"></div>
 				{/if}
 				{#if ensAvatar?.data}
 					<span class="w-[35px]">

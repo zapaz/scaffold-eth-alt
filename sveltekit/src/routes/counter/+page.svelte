@@ -7,7 +7,10 @@
 	import type { GetContractReturnGenericType } from "$lib/types";
 	import { counter } from "$lib/counter";
 
+	import IntegerInput from "$lib/components/scaffold-eth/inputs/IntegerInput.svelte";
+
 	let num: bigint = -1n;
+	let numInput: bigint = 0n;
 	let counterContract: GetContractReturnGenericType;
 	let publicClient: PublicClient;
 
@@ -19,7 +22,7 @@
 		num = await counterContract.read.number();
 	};
 	const inc = async () => await refresh(await counterContract.write.increment());
-	const set = async () => await refresh(await counterContract.write.setNumber([42n]));
+	const set = async () => await refresh(await counterContract.write.setNumber([numInput]));
 
 	onMount(async () => {
 		({ contract: counterContract, publicClient } = await counter(sepolia));
@@ -27,12 +30,22 @@
 	});
 </script>
 
-<h1>Kredeum Template</h1>
+<div class="flex items-center px-5 py-2">
+	<div>Counter:</div>
 
-<h2>
-	Counter: {num >= 0 ? num : "***"}
-</h2>
+	<div class="btn btn-primary btn-sm cursor-auto gap-1 font-normal m-2">
+		<span> {num >= 0 ? num : "***"}</span>
+	</div>
 
-<button onclick={inc}> Increment </button>
+	<div class="btn btn-primary btn-sm cursor-auto gap-1 font-normal m-2">
+		<button onclick={inc}>Increment</button>
+	</div>
 
-<button onclick={set}> Set </button>
+	<div class="block max-w-[60px]">
+		<IntegerInput bind:value={numInput} disableMultiplyBy1e18 />
+	</div>
+
+	<div class="btn btn-primary btn-sm cursor-auto gap-1 font-normal m-2">
+		<button onclick={set}>Set</button>
+	</div>
+</div>
