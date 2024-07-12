@@ -106,7 +106,7 @@
 		<li class={selectingNetwork ? "hidden" : ""}>
 			<button
 				class="menu-item btn-sm flex gap-3 whitespace-nowrap !rounded-xl py-3"
-				onclick={() => goto(blockExplorerAddressLink || "")}
+				onclick={() => goto(`/blockexplorer/address#${address}` || "")}
 			>
 				<Icon src={ArrowTopRightOnSquare} class="ml-2 h-6 w-4 sm:ml-0" />
 				View on Block Explorer

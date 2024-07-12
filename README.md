@@ -1,6 +1,8 @@
 # scaffold-eth-alt
 
-[scaffold-eth-alt](https://github.com/zapaz/scaffold-eth-alt) is an alternative tech stack of [scaffold-eth-2](https://github.com/scaffold-eth/scaffold-eth-2) while using components of [scaffold-eth-svelte](https://github.com/ByteAtATime/scaffold-eth-svelte)
+[scaffold-eth-alt](https://github.com/zapaz/scaffold-eth-alt) is an alternative tech stack to [scaffold-eth-2](https://github.com/scaffold-eth/scaffold-eth-2) while using components of [scaffold-eth-svelte](https://github.com/ByteAtATime/scaffold-eth-svelte)
+
+Demo site on Fleek.xyz here => https://scaffold-eth-alt.on-fleek.app/
 
 Comparison of tech stacks:
 
