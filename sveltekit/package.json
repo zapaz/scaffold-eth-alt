@@ -1,8 +1,9 @@
 {
-	"name": "@se-2/svelte",
+	"name": "@scaffold-eth-alt/sveltekit",
 	"version": "0.0.1",
 	"private": true,
 	"scripts": {
+		"clean": "rm -rf node_modules build .svelte-kit .turbo",
 		"dev": "vite dev",
 		"build": "vite build",
 		"preview": "vite preview",
@@ -53,7 +54,7 @@
 		"@web3modal/wagmi": "^5.0.6",
 		"abitype": "^1.0.5",
 		"blo": "^1.2.0",
-		"@kredeum-template/contracts": "workspace:^",
+		"@scaffold-eth-alt/foundry": "workspace:^",
 		"viem": "^2.17.3"
 	}
 }

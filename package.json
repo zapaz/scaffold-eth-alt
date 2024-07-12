@@ -1,9 +1,10 @@
 {
-  "name": "kredeum-template",
-  "version": "1.0.0",
+  "name": "scaffold-eth-alt",
+  "version": "0.0.1",
   "description": "",
   "main": "index.js",
   "scripts": {
+    "clean": "pnpm -r clean && rm -rf node_modules .turbo",
     "chain": "pnpm run --filter contracts chain",
     "deploy:anvil": "pnpm run --filter contracts deploy:anvil",
     "deploy:sepolia": "pnpm run --filter contracts deploy:sepolia",

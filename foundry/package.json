@@ -1,9 +1,10 @@
 {
-  "name": "@kredeum-template/contracts",
+  "name": "@scaffold-eth-alt/foundry",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
+    "clean": "rm -rf node_modules out broadcast cache .turbo ",
     "chain": "anvil",
     "format": "forge fmt",
     "check": "solhint src/**/*.sol",

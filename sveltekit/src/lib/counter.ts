@@ -8,8 +8,8 @@ import {
 } from "viem";
 import type { WindowEthereum } from "./types";
 
-import addresses from "@kredeum-template/contracts/addresses.json";
-import { abi } from "@kredeum-template/contracts/out/Counter.sol/Counter.json";
+import addresses from "@scaffold-eth-alt/foundry/addresses.json";
+import { abi } from "@scaffold-eth-alt/foundry/out/Counter.sol/Counter.json";
 
 const counter = async (chain: Chain) => {
 	if (!window) throw new Error("Not in browser");
