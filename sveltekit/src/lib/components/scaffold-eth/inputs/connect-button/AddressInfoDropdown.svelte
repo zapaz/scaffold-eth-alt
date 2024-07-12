@@ -16,6 +16,7 @@
 	import { getTargetNetworks } from "$lib/utils/scaffold-eth/networks";
 	import { createDisconnect } from "@byteatatime/wagmi-svelte";
 	import { createOutsideClick } from "$lib/runes/outsideClick.svelte";
+	import { goto } from "$app/navigation";
 
 	const {
 		address,
@@ -101,6 +102,17 @@
 				<span class="whitespace-nowrap">View QR Code</span>
 			</label>
 		</li>
+
+		<li class={selectingNetwork ? "hidden" : ""}>
+			<button
+				class="menu-item btn-sm flex gap-3 whitespace-nowrap !rounded-xl py-3"
+				onclick={() => goto(blockExplorerAddressLink || "")}
+			>
+				<Icon src={ArrowTopRightOnSquare} class="ml-2 h-6 w-4 sm:ml-0" />
+				View on Block Explorer
+			</button>
+		</li>
+
 		{#if allowedNetworks.length > 1}
 			<li class={selectingNetwork ? "hidden" : ""}>
 				<button
