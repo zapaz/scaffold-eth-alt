@@ -15,4 +15,3 @@
 </script>
 
 <AddressComponent {address} {contractData} />
-
