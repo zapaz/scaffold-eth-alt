@@ -7,7 +7,7 @@
 </script>
 
 <div class="flex items-center">
-	<a href={`/blockexplorer/transaction/${hash}`}>
+	<a href={`/blockexplorer/transaction#${hash}`}>
 		{hash?.substring(0, 6)}...{hash?.substring(hash.length - 4)}
 	</a>
 	{#if addressCopied}

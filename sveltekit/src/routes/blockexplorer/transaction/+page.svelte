@@ -12,12 +12,14 @@
 		formatEther,
 		formatUnits
 	} from "viem";
-	import { hardhat } from "viem/chains";
+	import { anvil } from "viem/chains";
 
-	const client = $derived.by(createPublicClient({ chainId: hardhat.id }));
-	// This is correct usage of the $page value
-	// eslint-disable-next-line svelte/valid-compile
-	const txHash = $page.params.txHash as Hash;
+	let txHash = $state("");
+	$effect(() => {
+		txHash = $page.url.hash.slice(1);
+	});
+
+	const client = $derived.by(createPublicClient({ chainId: anvil.id }));
 
 	let transaction = $state<Transaction>();
 	let receipt = $state<TransactionReceipt>();

@@ -3,15 +3,12 @@
 	import { onMount } from "svelte";
 	import AddressComponent from "../_components/AddressComponent.svelte";
 
-	let address: string;
+	let address = $state("");
 	let contractData: any;
 
-	const updateAddress = () => {
+	$effect(() => {
 		address = $page.url.hash.slice(1);
-		console.log("updateAddress ~ address:", address);
-	};
-
-	onMount(updateAddress);
+	});
 </script>
 
 <AddressComponent {address} {contractData} />

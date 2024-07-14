@@ -16,7 +16,7 @@
 				const tx = await client?.getTransaction({ hash: searchInput });
 
 				if (tx) {
-					goto(`/blockexplorer/transaction/${searchInput}`);
+					goto(`/blockexplorer/transaction#${searchInput}`);
 					return;
 				}
 			} catch (error) {

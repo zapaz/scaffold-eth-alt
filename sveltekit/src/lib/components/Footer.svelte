@@ -1,14 +1,13 @@
-<script>
+<script lang="ts">
 	import { nativeCurrencyPrice } from "$lib/runes/global.svelte";
 	import { createTargetNetwork } from "$lib/runes/targetNetwork.svelte";
 	import BuidlGuidlLogo from "./assets/BuidlGuidlLogo.svelte";
 	import { CurrencyDollar, Heart, Icon, MagnifyingGlass } from "svelte-hero-icons";
-	import { anvil } from "viem/chains";
-	import Faucet from "./scaffold-eth/Faucet.svelte";
+  import Faucet from "./scaffold-eth/Faucet.svelte";
 	import SwitchTheme from "./SwitchTheme.svelte";
 
 	const targetNetwork = $derived.by(createTargetNetwork());
-	const isLocalNetwork = $derived(targetNetwork.id === anvil.id);
+	let isLocalNetwork = $derived(targetNetwork.id == 31337)
 </script>
 
 <div class="mb-11 min-h-0 px-1 py-5 lg:mb-0">
@@ -27,6 +26,10 @@
 				{/if}
 				{#if isLocalNetwork}
 					<Faucet />
+					<a href="/blockexplorer" class="btn btn-primary btn-sm gap-1 font-normal">
+						<Icon src={MagnifyingGlass} class="h-4 w-4" />
+						<span>Block Explorer</span>
+					</a>
 				{/if}
 			</div>
 			<SwitchTheme class="pointer-events-auto {isLocalNetwork && 'self-end md:self-auto'}" />
