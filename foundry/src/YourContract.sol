@@ -24,7 +24,7 @@ contract YourContract {
     event GreetingChange(address indexed greetingSetter, string newGreeting, bool premium, uint256 value);
 
     // Constructor: Called once on contract deployment
- 
+
     constructor(address _owner) {
         owner = _owner;
     }

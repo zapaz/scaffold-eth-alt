@@ -1,19 +1,19 @@
 <script lang="ts">
 	import { getNetworkColor } from "$lib/runes/networkColor.svelte";
-	import { getTargetNetworks } from "$lib/utils/scaffold-eth/networks";
+	import { getTargetNetworks, type ChainWithAttributes } from "$lib/utils/scaffold-eth/networks";
 	import { createAccount, createSwitchChain } from "@byteatatime/wagmi-svelte";
 	import { ArrowsRightLeft, Icon } from "svelte-hero-icons";
 	import { createDarkMode } from "$lib/runes/darkMode.svelte";
 
 	const { hidden = false } = $props();
 
-	const switchChain = $derived.by(createSwitchChain());
-
 	const allowedNetworks = getTargetNetworks();
-	const { chain } = $derived.by(createAccount());
-	const items = allowedNetworks.filter((network) => network.id !== chain?.id);
 
+	const { chain } = $derived.by(createAccount());
+	const switchChain = $derived.by(createSwitchChain());
 	const { isDarkMode } = $derived.by(createDarkMode());
+
+	const items = $derived(allowedNetworks.filter((network) => network.id !== chain?.id));
 </script>
 
 {#each items as network (network.id)}

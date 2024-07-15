@@ -18,7 +18,7 @@
 			<div class="space-y-3 py-6">
 				<div class="flex flex-col items-center gap-6 space-x-4">
 					<QRCode
-						content={address}
+						data={address}
 						size={256}
 						padding={0}
 						backgroundColor="oklch(var(--b1))"

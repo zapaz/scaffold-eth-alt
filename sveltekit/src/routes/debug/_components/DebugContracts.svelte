@@ -7,17 +7,15 @@
 
 	const selectedContractStorageKey = "scaffoldEth2.selectedContract";
 
-	const contractsData = getAllContracts();
-	const contractNames = Object.keys(contractsData) as ContractName[];
+	const contractsData = $derived.by(getAllContracts);
+	const contractNames = $derived(Object.keys(contractsData));
 
-	let selectedContract = $state(contractNames[0]);
-
+	let selectedContract = $state<string>();
 	$effect(() => {
-		selectedContract;
-
-		untrack(() => {
-			localStorage.setItem(selectedContractStorageKey, String(selectedContract));
-		});
+		selectedContract = localStorage.getItem(selectedContractStorageKey) || contractNames[0];
+	});
+	$effect(() => {
+		localStorage.setItem(selectedContractStorageKey, String(selectedContract));
 	});
 </script>
 
