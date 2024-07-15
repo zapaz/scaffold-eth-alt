@@ -1,7 +1,7 @@
 <script lang="ts">
 	import BackButton from "./BackButton.svelte";
 	import { Address, Balance } from "$lib/components/scaffold-eth";
-	// import ContractTabs from "./ContractTabs.svelte";
+	import ContractTabs from "./ContractTabs.svelte";
 
 	const {
 		address,
@@ -30,5 +30,5 @@
 			</div>
 		</div>
 	</div>
-	<!-- <ContractTabs {address} {contractData} /> -->
+	<ContractTabs {address} {contractData} />
 </div>

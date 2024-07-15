@@ -4,7 +4,7 @@ const prerender = true;
 const ssr = false;
 
 const load: Load = async () => {
-  return {};
+	return {};
 };
 
 export { prerender, ssr, load };

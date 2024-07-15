@@ -1,5 +1,5 @@
 <script lang="ts">
-	// import { createFetchBlocks } from "$lib/runes/fetchBlocks.svelte";
+	import { createFetchBlocks } from "$lib/runes/fetchBlocks.svelte";
 	import { createPublicClient, http, type Address } from "viem";
 	import { hardhat } from "viem/chains";
 	import TransactionsTable from "./TransactionsTable.svelte";
@@ -13,7 +13,8 @@
 		contractData
 	}: { address: string; contractData: { bytecode: string; assembly: string } | null } = $props();
 
-	// const { blocks, transactionReceipts, currentPage, totalBlocks, setCurrentPage } = $derived.by(createFetchBlocks());
+	const { blocks, transactionReceipts, currentPage, totalBlocks, setCurrentPage } =
+		$derived.by(createFetchBlocks());
 	const publicClient = createPublicClient({
 		chain: hardhat,
 		transport: http()

@@ -14,9 +14,9 @@
 	} from "viem";
 	import { anvil } from "viem/chains";
 
-	let txHash = $state("");
+	let txHash = $state("0x0" as Hash);
 	$effect(() => {
-		txHash = $page.url.hash.slice(1);
+		txHash = $page.url.hash.slice(1) as Hash;
 	});
 
 	const client = $derived.by(createPublicClient({ chainId: anvil.id }));

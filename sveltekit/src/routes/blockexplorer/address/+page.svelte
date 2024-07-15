@@ -1,11 +1,12 @@
 <script lang="ts">
 	import { page } from "$app/stores";
-	import { onMount } from "svelte";
 	import AddressComponent from "../_components/AddressComponent.svelte";
 
-	let address = $state("");
-	let contractData: any;
+	const { data }: { data: { contractData: { bytecode: string; assembly: string } } } = $props();
 
+	const { contractData } = $derived(data);
+
+	let address = $state("");
 	$effect(() => {
 		address = $page.url.hash.slice(1);
 	});

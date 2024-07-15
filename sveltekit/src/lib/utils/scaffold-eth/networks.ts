@@ -113,7 +113,6 @@ export function getBlockExplorerTxLink(chainId: number, txnHash: string) {
  * Defaults to Etherscan if no (wagmi) block explorer is configured for the network.
  */
 export function getBlockExplorerAddressLink(network: chains.Chain, address: string) {
-	console.log("getBlockExplorerAddressLink", network.id, chains.anvil.id);
 	const blockExplorerBaseURL = network.blockExplorers?.default?.url;
 	if (network.id === chains.anvil.id) {
 		return `/blockexplorer/address#${address}`;

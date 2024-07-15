@@ -3,11 +3,12 @@
 	import { createTargetNetwork } from "$lib/runes/targetNetwork.svelte";
 	import BuidlGuidlLogo from "./assets/BuidlGuidlLogo.svelte";
 	import { CurrencyDollar, Heart, Icon, MagnifyingGlass } from "svelte-hero-icons";
-  import Faucet from "./scaffold-eth/Faucet.svelte";
+	import Faucet from "./scaffold-eth/Faucet.svelte";
 	import SwitchTheme from "./SwitchTheme.svelte";
+	import { anvil } from "viem/chains";
 
 	const targetNetwork = $derived.by(createTargetNetwork());
-	let isLocalNetwork = $derived(targetNetwork.id == 31337)
+	let isLocalNetwork = $derived(targetNetwork.id == anvil.id);
 </script>
 
 <div class="mb-11 min-h-0 px-1 py-5 lg:mb-0">

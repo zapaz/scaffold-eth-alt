@@ -10,7 +10,7 @@
     "check": "solhint src/**/*.sol",
     "build": "forge compile",
     "test": "forge test",
-    "abis": "node mergeAbis.ts",
+    "abis": "ts-node mergeAbis.ts",
     "deploy:deploy": "pnpm deploy:all --fork-url $CHAIN --account $ACCOUNT --broadcast",
     "deploy:validate": "pnpm deploy:all --fork-url $CHAIN",
     "deploy:testnet": "ACCOUNT=$TESTNET_ACCOUNT pnpm deploy:deploy --verify",
@@ -25,9 +25,9 @@
   "devDependencies": {
     "@types/fs-extra": "^11.0.4",
     "@types/node": "^20.14.10",
-    "eslint-plugin-json": "^3.1.0",
+    "eslint-plugin-json": "^4.0.0",
     "fs-extra": "^11.2.0",
-    "prettier": "^3.3.2",
+    "prettier": "^3.3.3",
     "solhint": "^5.0.1",
     "ts-node": "^10.9.2",
     "typescript": "^5.5.3"

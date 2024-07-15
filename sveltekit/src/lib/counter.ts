@@ -18,7 +18,6 @@ const counter = async (chain: Chain) => {
 	if (!windowEthereum) throw new Error("Ethereum Wallet extension not found");
 
 	const address = addresses[11155111]["Counter"] as Address;
-	console.log("counter ~ address:", address);
 
 	const publicClient = createPublicClient({ chain, transport: custom(windowEthereum) });
 

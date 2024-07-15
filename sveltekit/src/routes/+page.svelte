@@ -21,7 +21,7 @@
 			<code
 				class="bg-base-300 inline-block max-w-full break-words break-all text-base font-bold italic"
 			>
-				sveltekit / src / routes / +page.svelte
+				sveltekit/src/routes/+page.svelte
 			</code>
 		</p>
 		<p class="text-center text-lg">
@@ -35,7 +35,7 @@
 			<code
 				class="bg-base-300 inline-block max-w-full break-words break-all text-base font-bold italic"
 			>
-				contracts / src
+				foundry/src
 			</code>
 		</p>
 	</div>

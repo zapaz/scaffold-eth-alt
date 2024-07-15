@@ -17,6 +17,8 @@
 	import { createDisconnect } from "@byteatatime/wagmi-svelte";
 	import { createOutsideClick } from "$lib/runes/outsideClick.svelte";
 	import { goto } from "$app/navigation";
+	import { createTargetNetwork } from "$lib/runes/targetNetwork.svelte";
+	import { anvil } from "viem/chains";
 
 	const {
 		address,
@@ -29,6 +31,9 @@
 		displayName: string;
 		ensAvatar?: string;
 	} = $props();
+
+	const targetNetwork = $derived.by(createTargetNetwork());
+	let isLocalNetwork = $derived(targetNetwork.id == anvil.id);
 
 	let dropdown: HTMLElement | undefined = undefined;
 	createOutsideClick(
@@ -46,6 +51,11 @@
 
 	let addressCopied = $state(false);
 	let selectingNetwork = $state(false);
+
+	const gotoExplorer = () => {
+		if (isLocalNetwork) goto(blockExplorerAddressLink || "");
+		else window.open(blockExplorerAddressLink || "", "_blank");
+	};
 </script>
 
 <details class="dropdown dropdown-end leading-3" bind:this={dropdown}>
@@ -102,17 +112,15 @@
 				<span class="whitespace-nowrap">View QR Code</span>
 			</label>
 		</li>
-
 		<li class={selectingNetwork ? "hidden" : ""}>
 			<button
+				onclick={gotoExplorer}
 				class="menu-item btn-sm flex gap-3 whitespace-nowrap !rounded-xl py-3"
-				onclick={() => goto(`/blockexplorer/address#${address}` || "")}
 			>
 				<Icon src={ArrowTopRightOnSquare} class="ml-2 h-6 w-4 sm:ml-0" />
 				View on Block Explorer
 			</button>
 		</li>
-
 		{#if allowedNetworks.length > 1}
 			<li class={selectingNetwork ? "hidden" : ""}>
 				<button
