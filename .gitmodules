@@ -1,6 +1,15 @@
 [submodule "foundry/lib/forge-std"]
 	path = foundry/lib/forge-std
 	url = https://github.com/foundry-rs/forge-std
+[submodule "foundry/lib/OpenNFTs"]
+	path = foundry/lib/OpenNFTs
+	url = https://github.com/kredeum/OpenNFTs
+[submodule "foundry/lib/openzeppelin-contracts"]
+	path = foundry/lib/openzeppelin-contracts
+	url = https://github.com/Openzeppelin/openzeppelin-contracts
+[submodule "foundry/lib/openzeppelin-contracts-upgradeable"]
+	path = foundry/lib/openzeppelin-contracts-upgradeable
+	url = https://github.com/Openzeppelin/openzeppelin-contracts-upgradeable
 [submodule "foundry/lib/forge-deploy-lite"]
 	path = foundry/lib/forge-deploy-lite
 	url = https://github.com/zapaz/forge-deploy-lite
