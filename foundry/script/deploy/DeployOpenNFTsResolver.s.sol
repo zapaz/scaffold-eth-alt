@@ -11,16 +11,17 @@ import {DeployOpenNFTsFactoryV3} from "./DeployOpenNFTsFactoryV3.s.sol";
 
 contract DeployOpenNFTsResolver is DeployLite, DeployOpenNFTsFactoryV3 {
     function deployOpenNFTsResolver() public returns (address) {
+        address sender = vm.envAddress("SENDER");
         address openNFTsFactoryV3 = readAddress("OpenNFTsFactoryV3");
         address openNFTsResolverOld = readAddress("OpenNFTsResolver");
         bool factory = openNFTsFactoryV3 != address(0);
 
         require(
-            !factory || msg.sender == OpenNFTsFactoryV3(openNFTsFactoryV3).owner(),
+            !factory || sender == OpenNFTsFactoryV3(openNFTsFactoryV3).owner(),
             "Deployer must be OpenNFTsFactoryV3 owner !"
         );
 
-        bytes memory args = abi.encode(msg.sender, openNFTsFactoryV3);
+        bytes memory args = abi.encode(sender, openNFTsFactoryV3);
         DeployState state = deployState("OpenNFTsResolver");
 
         if (state == DeployState.None) {

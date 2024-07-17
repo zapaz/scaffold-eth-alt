@@ -8,11 +8,10 @@ import {OpenAutoMarket} from "src/OpenAutoMarket.sol";
 
 contract DeployOpenAutoMarket is DeployLite {
     function deployOpenAutoMarket() public returns (address) {
+        address sender = vm.envAddress("SENDER");
         address openNFTsFactoryV3 = readAddress("OpenNFTsFactoryV3");
 
-        require(
-            msg.sender == OpenNFTsFactoryV3(openNFTsFactoryV3).owner(), "Deployer must be OpenNFTsFactoryV3 owner !"
-        );
+        require(sender == OpenNFTsFactoryV3(openNFTsFactoryV3).owner(), "Deployer must be OpenNFTsFactoryV3 owner !");
 
         DeployState state = deployState("OpenAutoMarket");
 
@@ -25,7 +24,7 @@ contract DeployOpenAutoMarket is DeployLite {
             options[0] = true;
             options[1] = true;
             OpenAutoMarket(payable(openAutoMarket)).initialize(
-                "OpenAutoMarket", "OMKT", msg.sender, abi.encode(abi.encode(0, msg.sender, 0, options), address(0), 0)
+                "OpenAutoMarket", "OMKT", sender, abi.encode(abi.encode(0, sender, 0, options), address(0), 0)
             );
 
             OpenNFTsFactoryV3(openNFTsFactoryV3).setTemplate("OpenAutoMarket", openAutoMarket);

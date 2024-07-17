@@ -9,10 +9,11 @@ import {console} from "forge-std/console.sol";
 
 contract DeployOpenNFTsFactoryV3 is DeployLite {
     function deployOpenNFTsFactoryV3() public returns (address) {
+        address sender = vm.envAddress("SENDER");
         address treasuryAccount = vm.envAddress("TREASURY_ACCOUNT");
         uint96 treasuryFee = 90;
 
-        bytes memory args = abi.encode(msg.sender, treasuryAccount, treasuryFee);
+        bytes memory args = abi.encode(sender, treasuryAccount, treasuryFee);
 
         return deployLite("OpenNFTsFactoryV3", args);
     }

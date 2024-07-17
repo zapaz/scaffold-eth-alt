@@ -220,6 +220,3358 @@
         }
       ]
     },
+    "OpenAutoMarket": {
+      "address": "0xd771D7C0e1EBE89C9E9F663824851BB89b926d1a",
+      "abi": [
+        {
+          "type": "function",
+          "name": "approve",
+          "inputs": [
+            {
+              "name": "spender",
+              "type": "address",
+              "internalType": "address"
+            },
+            {
+              "name": "tokenID",
+              "type": "uint256",
+              "internalType": "uint256"
+            }
+          ],
+          "outputs": [],
+          "stateMutability": "nonpayable"
+        },
+        {
+          "type": "function",
+          "name": "balanceOf",
+          "inputs": [
+            {
+              "name": "owner",
+              "type": "address",
+              "internalType": "address"
+            }
+          ],
+          "outputs": [
+            {
+              "name": "",
+              "type": "uint256",
+              "internalType": "uint256"
+            }
+          ],
+          "stateMutability": "view"
+        },
+        {
+          "type": "function",
+          "name": "burn",
+          "inputs": [
+            {
+              "name": "tokenID",
+              "type": "uint256",
+              "internalType": "uint256"
+            }
+          ],
+          "outputs": [],
+          "stateMutability": "nonpayable"
+        },
+        {
+          "type": "function",
+          "name": "buy",
+          "inputs": [
+            {
+              "name": "tokenID",
+              "type": "uint256",
+              "internalType": "uint256"
+            }
+          ],
+          "outputs": [],
+          "stateMutability": "payable"
+        },
+        {
+          "type": "function",
+          "name": "getApproved",
+          "inputs": [
+            {
+              "name": "tokenID",
+              "type": "uint256",
+              "internalType": "uint256"
+            }
+          ],
+          "outputs": [
+            {
+              "name": "",
+              "type": "address",
+              "internalType": "address"
+            }
+          ],
+          "stateMutability": "view"
+        },
+        {
+          "type": "function",
+          "name": "getDefaultRoyalty",
+          "inputs": [],
+          "outputs": [
+            {
+              "name": "receiver",
+              "type": "tuple",
+              "internalType": "struct IOpenReceiverInfos.ReceiverInfos",
+              "components": [
+                {
+                  "name": "account",
+                  "type": "address",
+                  "internalType": "address"
+                },
+                {
+                  "name": "fee",
+                  "type": "uint96",
+                  "internalType": "uint96"
+                },
+                {
+                  "name": "minimum",
+                  "type": "uint256",
+                  "internalType": "uint256"
+                }
+              ]
+            }
+          ],
+          "stateMutability": "view"
+        },
+        {
+          "type": "function",
+          "name": "getMintPrice",
+          "inputs": [],
+          "outputs": [
+            {
+              "name": "",
+              "type": "uint256",
+              "internalType": "uint256"
+            }
+          ],
+          "stateMutability": "view"
+        },
+        {
+          "type": "function",
+          "name": "getTokenPrice",
+          "inputs": [
+            {
+              "name": "tokenID",
+              "type": "uint256",
+              "internalType": "uint256"
+            }
+          ],
+          "outputs": [
+            {
+              "name": "",
+              "type": "uint256",
+              "internalType": "uint256"
+            }
+          ],
+          "stateMutability": "view"
+        },
+        {
+          "type": "function",
+          "name": "getTokenRoyalty",
+          "inputs": [
+            {
+              "name": "tokenID",
+              "type": "uint256",
+              "internalType": "uint256"
+            }
+          ],
+          "outputs": [
+            {
+              "name": "receiver",
+              "type": "tuple",
+              "internalType": "struct IOpenReceiverInfos.ReceiverInfos",
+              "components": [
+                {
+                  "name": "account",
+                  "type": "address",
+                  "internalType": "address"
+                },
+                {
+                  "name": "fee",
+                  "type": "uint96",
+                  "internalType": "uint96"
+                },
+                {
+                  "name": "minimum",
+                  "type": "uint256",
+                  "internalType": "uint256"
+                }
+              ]
+            }
+          ],
+          "stateMutability": "view"
+        },
+        {
+          "type": "function",
+          "name": "gift",
+          "inputs": [
+            {
+              "name": "to",
+              "type": "address",
+              "internalType": "address"
+            },
+            {
+              "name": "tokenID",
+              "type": "uint256",
+              "internalType": "uint256"
+            }
+          ],
+          "outputs": [],
+          "stateMutability": "payable"
+        },
+        {
+          "type": "function",
+          "name": "initialize",
+          "inputs": [
+            {
+              "name": "name_",
+              "type": "string",
+              "internalType": "string"
+            },
+            {
+              "name": "symbol_",
+              "type": "string",
+              "internalType": "string"
+            },
+            {
+              "name": "owner_",
+              "type": "address",
+              "internalType": "address"
+            },
+            {
+              "name": "params_",
+              "type": "bytes",
+              "internalType": "bytes"
+            }
+          ],
+          "outputs": [],
+          "stateMutability": "nonpayable"
+        },
+        {
+          "type": "function",
+          "name": "initialized",
+          "inputs": [],
+          "outputs": [
+            {
+              "name": "",
+              "type": "bool",
+              "internalType": "bool"
+            }
+          ],
+          "stateMutability": "view"
+        },
+        {
+          "type": "function",
+          "name": "isApprovedForAll",
+          "inputs": [
+            {
+              "name": "owner",
+              "type": "address",
+              "internalType": "address"
+            },
+            {
+              "name": "operator",
+              "type": "address",
+              "internalType": "address"
+            }
+          ],
+          "outputs": [
+            {
+              "name": "",
+              "type": "bool",
+              "internalType": "bool"
+            }
+          ],
+          "stateMutability": "view"
+        },
+        {
+          "type": "function",
+          "name": "minimal",
+          "inputs": [],
+          "outputs": [
+            {
+              "name": "",
+              "type": "bool",
+              "internalType": "bool"
+            }
+          ],
+          "stateMutability": "view"
+        },
+        {
+          "type": "function",
+          "name": "mint",
+          "inputs": [
+            {
+              "name": "minter_",
+              "type": "address",
+              "internalType": "address"
+            },
+            {
+              "name": "tokenURI_",
+              "type": "string",
+              "internalType": "string"
+            },
+            {
+              "name": "tokenPrice_",
+              "type": "uint256",
+              "internalType": "uint256"
+            },
+            {
+              "name": "receiver_",
+              "type": "address",
+              "internalType": "address"
+            },
+            {
+              "name": "receiverFee_",
+              "type": "uint96",
+              "internalType": "uint96"
+            }
+          ],
+          "outputs": [
+            {
+              "name": "tokenID",
+              "type": "uint256",
+              "internalType": "uint256"
+            }
+          ],
+          "stateMutability": "payable"
+        },
+        {
+          "type": "function",
+          "name": "mint",
+          "inputs": [
+            {
+              "name": "minter",
+              "type": "address",
+              "internalType": "address"
+            },
+            {
+              "name": "tokenURI",
+              "type": "string",
+              "internalType": "string"
+            }
+          ],
+          "outputs": [
+            {
+              "name": "tokenID",
+              "type": "uint256",
+              "internalType": "uint256"
+            }
+          ],
+          "stateMutability": "nonpayable"
+        },
+        {
+          "type": "function",
+          "name": "mint",
+          "inputs": [
+            {
+              "name": "tokenURI",
+              "type": "string",
+              "internalType": "string"
+            }
+          ],
+          "outputs": [
+            {
+              "name": "tokenID",
+              "type": "uint256",
+              "internalType": "uint256"
+            }
+          ],
+          "stateMutability": "nonpayable"
+        },
+        {
+          "type": "function",
+          "name": "name",
+          "inputs": [],
+          "outputs": [
+            {
+              "name": "",
+              "type": "string",
+              "internalType": "string"
+            }
+          ],
+          "stateMutability": "view"
+        },
+        {
+          "type": "function",
+          "name": "open",
+          "inputs": [],
+          "outputs": [
+            {
+              "name": "",
+              "type": "bool",
+              "internalType": "bool"
+            }
+          ],
+          "stateMutability": "view"
+        },
+        {
+          "type": "function",
+          "name": "owner",
+          "inputs": [],
+          "outputs": [
+            {
+              "name": "",
+              "type": "address",
+              "internalType": "address"
+            }
+          ],
+          "stateMutability": "view"
+        },
+        {
+          "type": "function",
+          "name": "ownerOf",
+          "inputs": [
+            {
+              "name": "tokenID",
+              "type": "uint256",
+              "internalType": "uint256"
+            }
+          ],
+          "outputs": [
+            {
+              "name": "",
+              "type": "address",
+              "internalType": "address"
+            }
+          ],
+          "stateMutability": "view"
+        },
+        {
+          "type": "function",
+          "name": "parent",
+          "inputs": [],
+          "outputs": [
+            {
+              "name": "parent_",
+              "type": "address",
+              "internalType": "address"
+            }
+          ],
+          "stateMutability": "view"
+        },
+        {
+          "type": "function",
+          "name": "paused",
+          "inputs": [],
+          "outputs": [
+            {
+              "name": "",
+              "type": "bool",
+              "internalType": "bool"
+            }
+          ],
+          "stateMutability": "view"
+        },
+        {
+          "type": "function",
+          "name": "royaltyInfo",
+          "inputs": [
+            {
+              "name": "tokenID",
+              "type": "uint256",
+              "internalType": "uint256"
+            },
+            {
+              "name": "price",
+              "type": "uint256",
+              "internalType": "uint256"
+            }
+          ],
+          "outputs": [
+            {
+              "name": "receiver",
+              "type": "address",
+              "internalType": "address"
+            },
+            {
+              "name": "royaltyAmount",
+              "type": "uint256",
+              "internalType": "uint256"
+            }
+          ],
+          "stateMutability": "view"
+        },
+        {
+          "type": "function",
+          "name": "safeTransferFrom",
+          "inputs": [
+            {
+              "name": "from",
+              "type": "address",
+              "internalType": "address"
+            },
+            {
+              "name": "to",
+              "type": "address",
+              "internalType": "address"
+            },
+            {
+              "name": "tokenID",
+              "type": "uint256",
+              "internalType": "uint256"
+            }
+          ],
+          "outputs": [],
+          "stateMutability": "payable"
+        },
+        {
+          "type": "function",
+          "name": "safeTransferFrom",
+          "inputs": [
+            {
+              "name": "from",
+              "type": "address",
+              "internalType": "address"
+            },
+            {
+              "name": "to",
+              "type": "address",
+              "internalType": "address"
+            },
+            {
+              "name": "tokenID",
+              "type": "uint256",
+              "internalType": "uint256"
+            },
+            {
+              "name": "data",
+              "type": "bytes",
+              "internalType": "bytes"
+            }
+          ],
+          "outputs": [],
+          "stateMutability": "payable"
+        },
+        {
+          "type": "function",
+          "name": "setApprovalForAll",
+          "inputs": [
+            {
+              "name": "operator",
+              "type": "address",
+              "internalType": "address"
+            },
+            {
+              "name": "approved",
+              "type": "bool",
+              "internalType": "bool"
+            }
+          ],
+          "outputs": [],
+          "stateMutability": "nonpayable"
+        },
+        {
+          "type": "function",
+          "name": "setDefaultRoyalty",
+          "inputs": [
+            {
+              "name": "receiver",
+              "type": "address",
+              "internalType": "address"
+            },
+            {
+              "name": "fee",
+              "type": "uint96",
+              "internalType": "uint96"
+            }
+          ],
+          "outputs": [],
+          "stateMutability": "nonpayable"
+        },
+        {
+          "type": "function",
+          "name": "setMintPrice",
+          "inputs": [
+            {
+              "name": "price",
+              "type": "uint256",
+              "internalType": "uint256"
+            }
+          ],
+          "outputs": [],
+          "stateMutability": "nonpayable"
+        },
+        {
+          "type": "function",
+          "name": "setTokenPrice",
+          "inputs": [
+            {
+              "name": "tokenID",
+              "type": "uint256",
+              "internalType": "uint256"
+            },
+            {
+              "name": "price",
+              "type": "uint256",
+              "internalType": "uint256"
+            }
+          ],
+          "outputs": [],
+          "stateMutability": "nonpayable"
+        },
+        {
+          "type": "function",
+          "name": "setTokenRoyalty",
+          "inputs": [
+            {
+              "name": "tokenID",
+              "type": "uint256",
+              "internalType": "uint256"
+            },
+            {
+              "name": "receiver",
+              "type": "address",
+              "internalType": "address"
+            },
+            {
+              "name": "fee",
+              "type": "uint96",
+              "internalType": "uint96"
+            }
+          ],
+          "outputs": [],
+          "stateMutability": "nonpayable"
+        },
+        {
+          "type": "function",
+          "name": "supportsInterface",
+          "inputs": [
+            {
+              "name": "interfaceId",
+              "type": "bytes4",
+              "internalType": "bytes4"
+            }
+          ],
+          "outputs": [
+            {
+              "name": "",
+              "type": "bool",
+              "internalType": "bool"
+            }
+          ],
+          "stateMutability": "view"
+        },
+        {
+          "type": "function",
+          "name": "symbol",
+          "inputs": [],
+          "outputs": [
+            {
+              "name": "",
+              "type": "string",
+              "internalType": "string"
+            }
+          ],
+          "stateMutability": "view"
+        },
+        {
+          "type": "function",
+          "name": "template",
+          "inputs": [],
+          "outputs": [
+            {
+              "name": "",
+              "type": "string",
+              "internalType": "string"
+            }
+          ],
+          "stateMutability": "view"
+        },
+        {
+          "type": "function",
+          "name": "togglePause",
+          "inputs": [],
+          "outputs": [],
+          "stateMutability": "nonpayable"
+        },
+        {
+          "type": "function",
+          "name": "tokenByIndex",
+          "inputs": [
+            {
+              "name": "index",
+              "type": "uint256",
+              "internalType": "uint256"
+            }
+          ],
+          "outputs": [
+            {
+              "name": "",
+              "type": "uint256",
+              "internalType": "uint256"
+            }
+          ],
+          "stateMutability": "view"
+        },
+        {
+          "type": "function",
+          "name": "tokenIdNext",
+          "inputs": [],
+          "outputs": [
+            {
+              "name": "",
+              "type": "uint256",
+              "internalType": "uint256"
+            }
+          ],
+          "stateMutability": "view"
+        },
+        {
+          "type": "function",
+          "name": "tokenOfOwnerByIndex",
+          "inputs": [
+            {
+              "name": "owner",
+              "type": "address",
+              "internalType": "address"
+            },
+            {
+              "name": "index",
+              "type": "uint256",
+              "internalType": "uint256"
+            }
+          ],
+          "outputs": [
+            {
+              "name": "",
+              "type": "uint256",
+              "internalType": "uint256"
+            }
+          ],
+          "stateMutability": "view"
+        },
+        {
+          "type": "function",
+          "name": "tokenURI",
+          "inputs": [
+            {
+              "name": "tokenID",
+              "type": "uint256",
+              "internalType": "uint256"
+            }
+          ],
+          "outputs": [
+            {
+              "name": "",
+              "type": "string",
+              "internalType": "string"
+            }
+          ],
+          "stateMutability": "view"
+        },
+        {
+          "type": "function",
+          "name": "totalSupply",
+          "inputs": [],
+          "outputs": [
+            {
+              "name": "",
+              "type": "uint256",
+              "internalType": "uint256"
+            }
+          ],
+          "stateMutability": "view"
+        },
+        {
+          "type": "function",
+          "name": "transferFrom",
+          "inputs": [
+            {
+              "name": "from",
+              "type": "address",
+              "internalType": "address"
+            },
+            {
+              "name": "to",
+              "type": "address",
+              "internalType": "address"
+            },
+            {
+              "name": "tokenID",
+              "type": "uint256",
+              "internalType": "uint256"
+            }
+          ],
+          "outputs": [],
+          "stateMutability": "payable"
+        },
+        {
+          "type": "function",
+          "name": "transferOwnership",
+          "inputs": [
+            {
+              "name": "newOwner",
+              "type": "address",
+              "internalType": "address"
+            }
+          ],
+          "outputs": [],
+          "stateMutability": "nonpayable"
+        },
+        {
+          "type": "function",
+          "name": "treasury",
+          "inputs": [],
+          "outputs": [
+            {
+              "name": "account",
+              "type": "address",
+              "internalType": "address"
+            },
+            {
+              "name": "fee",
+              "type": "uint96",
+              "internalType": "uint96"
+            },
+            {
+              "name": "minimum",
+              "type": "uint256",
+              "internalType": "uint256"
+            }
+          ],
+          "stateMutability": "view"
+        },
+        {
+          "type": "function",
+          "name": "version",
+          "inputs": [],
+          "outputs": [
+            {
+              "name": "",
+              "type": "uint256",
+              "internalType": "uint256"
+            }
+          ],
+          "stateMutability": "view"
+        },
+        {
+          "type": "function",
+          "name": "withdraw",
+          "inputs": [],
+          "outputs": [
+            {
+              "name": "",
+              "type": "uint256",
+              "internalType": "uint256"
+            }
+          ],
+          "stateMutability": "nonpayable"
+        },
+        {
+          "type": "event",
+          "name": "Approval",
+          "inputs": [
+            {
+              "name": "owner",
+              "type": "address",
+              "indexed": true,
+              "internalType": "address"
+            },
+            {
+              "name": "approved",
+              "type": "address",
+              "indexed": true,
+              "internalType": "address"
+            },
+            {
+              "name": "tokenId",
+              "type": "uint256",
+              "indexed": true,
+              "internalType": "uint256"
+            }
+          ],
+          "anonymous": false
+        },
+        {
+          "type": "event",
+          "name": "ApprovalForAll",
+          "inputs": [
+            {
+              "name": "owner",
+              "type": "address",
+              "indexed": true,
+              "internalType": "address"
+            },
+            {
+              "name": "operator",
+              "type": "address",
+              "indexed": true,
+              "internalType": "address"
+            },
+            {
+              "name": "approved",
+              "type": "bool",
+              "indexed": false,
+              "internalType": "bool"
+            }
+          ],
+          "anonymous": false
+        },
+        {
+          "type": "event",
+          "name": "OwnershipTransferred",
+          "inputs": [
+            {
+              "name": "previousOwner",
+              "type": "address",
+              "indexed": true,
+              "internalType": "address"
+            },
+            {
+              "name": "newOwner",
+              "type": "address",
+              "indexed": true,
+              "internalType": "address"
+            }
+          ],
+          "anonymous": false
+        },
+        {
+          "type": "event",
+          "name": "Pay",
+          "inputs": [
+            {
+              "name": "tokenID",
+              "type": "uint256",
+              "indexed": false,
+              "internalType": "uint256"
+            },
+            {
+              "name": "price",
+              "type": "uint256",
+              "indexed": false,
+              "internalType": "uint256"
+            },
+            {
+              "name": "seller",
+              "type": "address",
+              "indexed": false,
+              "internalType": "address"
+            },
+            {
+              "name": "paid",
+              "type": "uint256",
+              "indexed": false,
+              "internalType": "uint256"
+            },
+            {
+              "name": "receiver",
+              "type": "address",
+              "indexed": false,
+              "internalType": "address"
+            },
+            {
+              "name": "royalties",
+              "type": "uint256",
+              "indexed": false,
+              "internalType": "uint256"
+            },
+            {
+              "name": "fee",
+              "type": "uint256",
+              "indexed": false,
+              "internalType": "uint256"
+            },
+            {
+              "name": "buyer",
+              "type": "address",
+              "indexed": false,
+              "internalType": "address"
+            },
+            {
+              "name": "unspent",
+              "type": "uint256",
+              "indexed": false,
+              "internalType": "uint256"
+            }
+          ],
+          "anonymous": false
+        },
+        {
+          "type": "event",
+          "name": "SetDefaultRoyalty",
+          "inputs": [
+            {
+              "name": "receiver",
+              "type": "address",
+              "indexed": false,
+              "internalType": "address"
+            },
+            {
+              "name": "fee",
+              "type": "uint96",
+              "indexed": false,
+              "internalType": "uint96"
+            }
+          ],
+          "anonymous": false
+        },
+        {
+          "type": "event",
+          "name": "SetMintPrice",
+          "inputs": [
+            {
+              "name": "price",
+              "type": "uint256",
+              "indexed": false,
+              "internalType": "uint256"
+            }
+          ],
+          "anonymous": false
+        },
+        {
+          "type": "event",
+          "name": "SetPaused",
+          "inputs": [
+            {
+              "name": "paused",
+              "type": "bool",
+              "indexed": true,
+              "internalType": "bool"
+            },
+            {
+              "name": "account",
+              "type": "address",
+              "indexed": true,
+              "internalType": "address"
+            }
+          ],
+          "anonymous": false
+        },
+        {
+          "type": "event",
+          "name": "SetTokenPrice",
+          "inputs": [
+            {
+              "name": "tokenID",
+              "type": "uint256",
+              "indexed": false,
+              "internalType": "uint256"
+            },
+            {
+              "name": "price",
+              "type": "uint256",
+              "indexed": false,
+              "internalType": "uint256"
+            }
+          ],
+          "anonymous": false
+        },
+        {
+          "type": "event",
+          "name": "SetTokenRoyalty",
+          "inputs": [
+            {
+              "name": "tokenID",
+              "type": "uint256",
+              "indexed": false,
+              "internalType": "uint256"
+            },
+            {
+              "name": "receiver",
+              "type": "address",
+              "indexed": false,
+              "internalType": "address"
+            },
+            {
+              "name": "fee",
+              "type": "uint96",
+              "indexed": false,
+              "internalType": "uint96"
+            }
+          ],
+          "anonymous": false
+        },
+        {
+          "type": "event",
+          "name": "Transfer",
+          "inputs": [
+            {
+              "name": "from",
+              "type": "address",
+              "indexed": true,
+              "internalType": "address"
+            },
+            {
+              "name": "to",
+              "type": "address",
+              "indexed": true,
+              "internalType": "address"
+            },
+            {
+              "name": "tokenId",
+              "type": "uint256",
+              "indexed": true,
+              "internalType": "uint256"
+            }
+          ],
+          "anonymous": false
+        }
+      ]
+    },
+    "OpenNFTsFactoryV3": {
+      "address": "0x0116686E2291dbd5e317F47faDBFb43B599786Ef",
+      "abi": [
+        {
+          "type": "constructor",
+          "inputs": [
+            {
+              "name": "initialOwner_",
+              "type": "address",
+              "internalType": "address"
+            },
+            {
+              "name": "treasury_",
+              "type": "address",
+              "internalType": "address"
+            },
+            {
+              "name": "treasuryFee_",
+              "type": "uint96",
+              "internalType": "uint96"
+            }
+          ],
+          "stateMutability": "nonpayable"
+        },
+        {
+          "type": "function",
+          "name": "clone",
+          "inputs": [
+            {
+              "name": "name",
+              "type": "string",
+              "internalType": "string"
+            },
+            {
+              "name": "symbol",
+              "type": "string",
+              "internalType": "string"
+            },
+            {
+              "name": "templateName",
+              "type": "string",
+              "internalType": "string"
+            },
+            {
+              "name": "params",
+              "type": "bytes",
+              "internalType": "bytes"
+            }
+          ],
+          "outputs": [
+            {
+              "name": "clone_",
+              "type": "address",
+              "internalType": "address"
+            }
+          ],
+          "stateMutability": "nonpayable"
+        },
+        {
+          "type": "function",
+          "name": "clone",
+          "inputs": [
+            {
+              "name": "template_",
+              "type": "address",
+              "internalType": "address"
+            }
+          ],
+          "outputs": [
+            {
+              "name": "clone_",
+              "type": "address",
+              "internalType": "address"
+            }
+          ],
+          "stateMutability": "nonpayable"
+        },
+        {
+          "type": "function",
+          "name": "countTemplates",
+          "inputs": [],
+          "outputs": [
+            {
+              "name": "count",
+              "type": "uint256",
+              "internalType": "uint256"
+            }
+          ],
+          "stateMutability": "view"
+        },
+        {
+          "type": "function",
+          "name": "nftsResolver",
+          "inputs": [],
+          "outputs": [
+            {
+              "name": "",
+              "type": "address",
+              "internalType": "address"
+            }
+          ],
+          "stateMutability": "view"
+        },
+        {
+          "type": "function",
+          "name": "owner",
+          "inputs": [],
+          "outputs": [
+            {
+              "name": "",
+              "type": "address",
+              "internalType": "address"
+            }
+          ],
+          "stateMutability": "view"
+        },
+        {
+          "type": "function",
+          "name": "setResolver",
+          "inputs": [
+            {
+              "name": "resolver_",
+              "type": "address",
+              "internalType": "address"
+            }
+          ],
+          "outputs": [],
+          "stateMutability": "nonpayable"
+        },
+        {
+          "type": "function",
+          "name": "setTemplate",
+          "inputs": [
+            {
+              "name": "templateName_",
+              "type": "string",
+              "internalType": "string"
+            },
+            {
+              "name": "template_",
+              "type": "address",
+              "internalType": "address"
+            }
+          ],
+          "outputs": [],
+          "stateMutability": "nonpayable"
+        },
+        {
+          "type": "function",
+          "name": "setTreasury",
+          "inputs": [
+            {
+              "name": "treasury_",
+              "type": "address",
+              "internalType": "address"
+            },
+            {
+              "name": "treasuryFee_",
+              "type": "uint96",
+              "internalType": "uint96"
+            }
+          ],
+          "outputs": [],
+          "stateMutability": "nonpayable"
+        },
+        {
+          "type": "function",
+          "name": "supportsInterface",
+          "inputs": [
+            {
+              "name": "interfaceId",
+              "type": "bytes4",
+              "internalType": "bytes4"
+            }
+          ],
+          "outputs": [
+            {
+              "name": "",
+              "type": "bool",
+              "internalType": "bool"
+            }
+          ],
+          "stateMutability": "view"
+        },
+        {
+          "type": "function",
+          "name": "template",
+          "inputs": [
+            {
+              "name": "templateName",
+              "type": "string",
+              "internalType": "string"
+            }
+          ],
+          "outputs": [
+            {
+              "name": "template_",
+              "type": "address",
+              "internalType": "address"
+            }
+          ],
+          "stateMutability": "view"
+        },
+        {
+          "type": "function",
+          "name": "templates",
+          "inputs": [
+            {
+              "name": "",
+              "type": "uint256",
+              "internalType": "uint256"
+            }
+          ],
+          "outputs": [
+            {
+              "name": "",
+              "type": "address",
+              "internalType": "address"
+            }
+          ],
+          "stateMutability": "view"
+        },
+        {
+          "type": "function",
+          "name": "transferOwnership",
+          "inputs": [
+            {
+              "name": "newOwner",
+              "type": "address",
+              "internalType": "address"
+            }
+          ],
+          "outputs": [],
+          "stateMutability": "nonpayable"
+        },
+        {
+          "type": "event",
+          "name": "Clone",
+          "inputs": [
+            {
+              "name": "templateName",
+              "type": "string",
+              "indexed": true,
+              "internalType": "string"
+            },
+            {
+              "name": "clone",
+              "type": "address",
+              "indexed": true,
+              "internalType": "address"
+            },
+            {
+              "name": "name",
+              "type": "string",
+              "indexed": true,
+              "internalType": "string"
+            },
+            {
+              "name": "symbol",
+              "type": "string",
+              "indexed": false,
+              "internalType": "string"
+            }
+          ],
+          "anonymous": false
+        },
+        {
+          "type": "event",
+          "name": "OwnershipTransferred",
+          "inputs": [
+            {
+              "name": "previousOwner",
+              "type": "address",
+              "indexed": true,
+              "internalType": "address"
+            },
+            {
+              "name": "newOwner",
+              "type": "address",
+              "indexed": true,
+              "internalType": "address"
+            }
+          ],
+          "anonymous": false
+        },
+        {
+          "type": "event",
+          "name": "SetResolver",
+          "inputs": [
+            {
+              "name": "resolver",
+              "type": "address",
+              "indexed": true,
+              "internalType": "address"
+            }
+          ],
+          "anonymous": false
+        },
+        {
+          "type": "event",
+          "name": "SetTemplate",
+          "inputs": [
+            {
+              "name": "templateName",
+              "type": "string",
+              "indexed": true,
+              "internalType": "string"
+            },
+            {
+              "name": "template",
+              "type": "address",
+              "indexed": true,
+              "internalType": "address"
+            },
+            {
+              "name": "index",
+              "type": "uint256",
+              "indexed": false,
+              "internalType": "uint256"
+            }
+          ],
+          "anonymous": false
+        }
+      ]
+    },
+    "OpenNFTsResolver": {
+      "address": "0x9bAaB117304f7D6517048e371025dB8f89a8DbE5",
+      "abi": [
+        {
+          "type": "constructor",
+          "inputs": [
+            {
+              "name": "owner_",
+              "type": "address",
+              "internalType": "address"
+            },
+            {
+              "name": "registerer_",
+              "type": "address",
+              "internalType": "address"
+            }
+          ],
+          "stateMutability": "nonpayable"
+        },
+        {
+          "type": "function",
+          "name": "addAddress",
+          "inputs": [
+            {
+              "name": "addr",
+              "type": "address",
+              "internalType": "address"
+            }
+          ],
+          "outputs": [],
+          "stateMutability": "nonpayable"
+        },
+        {
+          "type": "function",
+          "name": "addAddresses",
+          "inputs": [
+            {
+              "name": "addrs",
+              "type": "address[]",
+              "internalType": "address[]"
+            }
+          ],
+          "outputs": [],
+          "stateMutability": "nonpayable"
+        },
+        {
+          "type": "function",
+          "name": "checkErcInterfaces",
+          "inputs": [
+            {
+              "name": "smartcontract",
+              "type": "address",
+              "internalType": "address"
+            }
+          ],
+          "outputs": [
+            {
+              "name": "",
+              "type": "bool[]",
+              "internalType": "bool[]"
+            }
+          ],
+          "stateMutability": "view"
+        },
+        {
+          "type": "function",
+          "name": "checkSupportedInterfaces",
+          "inputs": [
+            {
+              "name": "smartcontract",
+              "type": "address",
+              "internalType": "address"
+            },
+            {
+              "name": "erc",
+              "type": "bool",
+              "internalType": "bool"
+            },
+            {
+              "name": "interfaceIds",
+              "type": "bytes4[]",
+              "internalType": "bytes4[]"
+            }
+          ],
+          "outputs": [
+            {
+              "name": "interfaceIdsChecks",
+              "type": "bool[]",
+              "internalType": "bool[]"
+            }
+          ],
+          "stateMutability": "view"
+        },
+        {
+          "type": "function",
+          "name": "countAddresses",
+          "inputs": [],
+          "outputs": [
+            {
+              "name": "",
+              "type": "uint256",
+              "internalType": "uint256"
+            }
+          ],
+          "stateMutability": "view"
+        },
+        {
+          "type": "function",
+          "name": "getAddresses",
+          "inputs": [],
+          "outputs": [
+            {
+              "name": "",
+              "type": "address[]",
+              "internalType": "address[]"
+            }
+          ],
+          "stateMutability": "view"
+        },
+        {
+          "type": "function",
+          "name": "getCollectionInfos",
+          "inputs": [
+            {
+              "name": "collection",
+              "type": "address",
+              "internalType": "address"
+            },
+            {
+              "name": "account",
+              "type": "address",
+              "internalType": "address"
+            }
+          ],
+          "outputs": [
+            {
+              "name": "collectionInfos",
+              "type": "tuple",
+              "internalType": "struct IERCNftInfos.CollectionInfos",
+              "components": [
+                {
+                  "name": "collection",
+                  "type": "address",
+                  "internalType": "address"
+                },
+                {
+                  "name": "owner",
+                  "type": "address",
+                  "internalType": "address"
+                },
+                {
+                  "name": "name",
+                  "type": "string",
+                  "internalType": "string"
+                },
+                {
+                  "name": "symbol",
+                  "type": "string",
+                  "internalType": "string"
+                },
+                {
+                  "name": "totalSupply",
+                  "type": "uint256",
+                  "internalType": "uint256"
+                },
+                {
+                  "name": "balanceOf",
+                  "type": "uint256",
+                  "internalType": "uint256"
+                },
+                {
+                  "name": "approvedForAll",
+                  "type": "bool",
+                  "internalType": "bool"
+                },
+                {
+                  "name": "supported",
+                  "type": "bool[]",
+                  "internalType": "bool[]"
+                },
+                {
+                  "name": "erc",
+                  "type": "uint8",
+                  "internalType": "enum IERCNftInfos.NftType"
+                }
+              ]
+            }
+          ],
+          "stateMutability": "view"
+        },
+        {
+          "type": "function",
+          "name": "getCollectionsInfos",
+          "inputs": [
+            {
+              "name": "collections",
+              "type": "address[]",
+              "internalType": "address[]"
+            },
+            {
+              "name": "account",
+              "type": "address",
+              "internalType": "address"
+            },
+            {
+              "name": "interfaceIds",
+              "type": "bytes4[]",
+              "internalType": "bytes4[]"
+            }
+          ],
+          "outputs": [
+            {
+              "name": "collectionsInfos",
+              "type": "tuple[]",
+              "internalType": "struct IERCNftInfos.CollectionInfos[]",
+              "components": [
+                {
+                  "name": "collection",
+                  "type": "address",
+                  "internalType": "address"
+                },
+                {
+                  "name": "owner",
+                  "type": "address",
+                  "internalType": "address"
+                },
+                {
+                  "name": "name",
+                  "type": "string",
+                  "internalType": "string"
+                },
+                {
+                  "name": "symbol",
+                  "type": "string",
+                  "internalType": "string"
+                },
+                {
+                  "name": "totalSupply",
+                  "type": "uint256",
+                  "internalType": "uint256"
+                },
+                {
+                  "name": "balanceOf",
+                  "type": "uint256",
+                  "internalType": "uint256"
+                },
+                {
+                  "name": "approvedForAll",
+                  "type": "bool",
+                  "internalType": "bool"
+                },
+                {
+                  "name": "supported",
+                  "type": "bool[]",
+                  "internalType": "bool[]"
+                },
+                {
+                  "name": "erc",
+                  "type": "uint8",
+                  "internalType": "enum IERCNftInfos.NftType"
+                }
+              ]
+            }
+          ],
+          "stateMutability": "view"
+        },
+        {
+          "type": "function",
+          "name": "getNftInfos",
+          "inputs": [
+            {
+              "name": "collection",
+              "type": "address",
+              "internalType": "address"
+            },
+            {
+              "name": "tokenID",
+              "type": "uint256",
+              "internalType": "uint256"
+            },
+            {
+              "name": "account",
+              "type": "address",
+              "internalType": "address"
+            }
+          ],
+          "outputs": [
+            {
+              "name": "nftInfos",
+              "type": "tuple",
+              "internalType": "struct IERCNftInfos.NftInfos",
+              "components": [
+                {
+                  "name": "tokenID",
+                  "type": "uint256",
+                  "internalType": "uint256"
+                },
+                {
+                  "name": "tokenURI",
+                  "type": "string",
+                  "internalType": "string"
+                },
+                {
+                  "name": "owner",
+                  "type": "address",
+                  "internalType": "address"
+                },
+                {
+                  "name": "approved",
+                  "type": "address",
+                  "internalType": "address"
+                },
+                {
+                  "name": "balanceOf",
+                  "type": "uint256",
+                  "internalType": "uint256"
+                },
+                {
+                  "name": "erc",
+                  "type": "uint8",
+                  "internalType": "enum IERCNftInfos.NftType"
+                }
+              ]
+            }
+          ],
+          "stateMutability": "view"
+        },
+        {
+          "type": "function",
+          "name": "getNftsInfos",
+          "inputs": [
+            {
+              "name": "collection",
+              "type": "address",
+              "internalType": "address"
+            },
+            {
+              "name": "tokenIDs",
+              "type": "uint256[]",
+              "internalType": "uint256[]"
+            },
+            {
+              "name": "account",
+              "type": "address",
+              "internalType": "address"
+            }
+          ],
+          "outputs": [
+            {
+              "name": "nftsInfos",
+              "type": "tuple[]",
+              "internalType": "struct IERCNftInfos.NftInfos[]",
+              "components": [
+                {
+                  "name": "tokenID",
+                  "type": "uint256",
+                  "internalType": "uint256"
+                },
+                {
+                  "name": "tokenURI",
+                  "type": "string",
+                  "internalType": "string"
+                },
+                {
+                  "name": "owner",
+                  "type": "address",
+                  "internalType": "address"
+                },
+                {
+                  "name": "approved",
+                  "type": "address",
+                  "internalType": "address"
+                },
+                {
+                  "name": "balanceOf",
+                  "type": "uint256",
+                  "internalType": "uint256"
+                },
+                {
+                  "name": "erc",
+                  "type": "uint8",
+                  "internalType": "enum IERCNftInfos.NftType"
+                }
+              ]
+            }
+          ],
+          "stateMutability": "view"
+        },
+        {
+          "type": "function",
+          "name": "getNftsInfos",
+          "inputs": [
+            {
+              "name": "collection",
+              "type": "address",
+              "internalType": "address"
+            },
+            {
+              "name": "account",
+              "type": "address",
+              "internalType": "address"
+            },
+            {
+              "name": "limit",
+              "type": "uint256",
+              "internalType": "uint256"
+            },
+            {
+              "name": "offset",
+              "type": "uint256",
+              "internalType": "uint256"
+            }
+          ],
+          "outputs": [
+            {
+              "name": "nftsInfos",
+              "type": "tuple[]",
+              "internalType": "struct IERCNftInfos.NftInfos[]",
+              "components": [
+                {
+                  "name": "tokenID",
+                  "type": "uint256",
+                  "internalType": "uint256"
+                },
+                {
+                  "name": "tokenURI",
+                  "type": "string",
+                  "internalType": "string"
+                },
+                {
+                  "name": "owner",
+                  "type": "address",
+                  "internalType": "address"
+                },
+                {
+                  "name": "approved",
+                  "type": "address",
+                  "internalType": "address"
+                },
+                {
+                  "name": "balanceOf",
+                  "type": "uint256",
+                  "internalType": "uint256"
+                },
+                {
+                  "name": "erc",
+                  "type": "uint8",
+                  "internalType": "enum IERCNftInfos.NftType"
+                }
+              ]
+            },
+            {
+              "name": "count",
+              "type": "uint256",
+              "internalType": "uint256"
+            },
+            {
+              "name": "total",
+              "type": "uint256",
+              "internalType": "uint256"
+            }
+          ],
+          "stateMutability": "view"
+        },
+        {
+          "type": "function",
+          "name": "getOpenNFTsCollectionInfos",
+          "inputs": [
+            {
+              "name": "collection",
+              "type": "address",
+              "internalType": "address"
+            },
+            {
+              "name": "account",
+              "type": "address",
+              "internalType": "address"
+            }
+          ],
+          "outputs": [
+            {
+              "name": "collectionInfos",
+              "type": "tuple",
+              "internalType": "struct IERCNftInfos.CollectionInfos",
+              "components": [
+                {
+                  "name": "collection",
+                  "type": "address",
+                  "internalType": "address"
+                },
+                {
+                  "name": "owner",
+                  "type": "address",
+                  "internalType": "address"
+                },
+                {
+                  "name": "name",
+                  "type": "string",
+                  "internalType": "string"
+                },
+                {
+                  "name": "symbol",
+                  "type": "string",
+                  "internalType": "string"
+                },
+                {
+                  "name": "totalSupply",
+                  "type": "uint256",
+                  "internalType": "uint256"
+                },
+                {
+                  "name": "balanceOf",
+                  "type": "uint256",
+                  "internalType": "uint256"
+                },
+                {
+                  "name": "approvedForAll",
+                  "type": "bool",
+                  "internalType": "bool"
+                },
+                {
+                  "name": "supported",
+                  "type": "bool[]",
+                  "internalType": "bool[]"
+                },
+                {
+                  "name": "erc",
+                  "type": "uint8",
+                  "internalType": "enum IERCNftInfos.NftType"
+                }
+              ]
+            },
+            {
+              "name": "openNTFscollectionInfos",
+              "type": "tuple",
+              "internalType": "struct IOpenNFTsInfos.OpenNFTsCollectionInfos",
+              "components": [
+                {
+                  "name": "version",
+                  "type": "uint256",
+                  "internalType": "uint256"
+                },
+                {
+                  "name": "template",
+                  "type": "string",
+                  "internalType": "string"
+                },
+                {
+                  "name": "open",
+                  "type": "bool",
+                  "internalType": "bool"
+                },
+                {
+                  "name": "minimal",
+                  "type": "bool",
+                  "internalType": "bool"
+                },
+                {
+                  "name": "price",
+                  "type": "uint256",
+                  "internalType": "uint256"
+                },
+                {
+                  "name": "receiver",
+                  "type": "tuple",
+                  "internalType": "struct IOpenReceiverInfos.ReceiverInfos",
+                  "components": [
+                    {
+                      "name": "account",
+                      "type": "address",
+                      "internalType": "address"
+                    },
+                    {
+                      "name": "fee",
+                      "type": "uint96",
+                      "internalType": "uint96"
+                    },
+                    {
+                      "name": "minimum",
+                      "type": "uint256",
+                      "internalType": "uint256"
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "stateMutability": "view"
+        },
+        {
+          "type": "function",
+          "name": "getOpenNFTsCollectionsInfos",
+          "inputs": [
+            {
+              "name": "account",
+              "type": "address",
+              "internalType": "address"
+            }
+          ],
+          "outputs": [
+            {
+              "name": "collectionsInfos",
+              "type": "tuple[]",
+              "internalType": "struct IERCNftInfos.CollectionInfos[]",
+              "components": [
+                {
+                  "name": "collection",
+                  "type": "address",
+                  "internalType": "address"
+                },
+                {
+                  "name": "owner",
+                  "type": "address",
+                  "internalType": "address"
+                },
+                {
+                  "name": "name",
+                  "type": "string",
+                  "internalType": "string"
+                },
+                {
+                  "name": "symbol",
+                  "type": "string",
+                  "internalType": "string"
+                },
+                {
+                  "name": "totalSupply",
+                  "type": "uint256",
+                  "internalType": "uint256"
+                },
+                {
+                  "name": "balanceOf",
+                  "type": "uint256",
+                  "internalType": "uint256"
+                },
+                {
+                  "name": "approvedForAll",
+                  "type": "bool",
+                  "internalType": "bool"
+                },
+                {
+                  "name": "supported",
+                  "type": "bool[]",
+                  "internalType": "bool[]"
+                },
+                {
+                  "name": "erc",
+                  "type": "uint8",
+                  "internalType": "enum IERCNftInfos.NftType"
+                }
+              ]
+            },
+            {
+              "name": "openNFTsCollectionsInfos",
+              "type": "tuple[]",
+              "internalType": "struct IOpenNFTsInfos.OpenNFTsCollectionInfos[]",
+              "components": [
+                {
+                  "name": "version",
+                  "type": "uint256",
+                  "internalType": "uint256"
+                },
+                {
+                  "name": "template",
+                  "type": "string",
+                  "internalType": "string"
+                },
+                {
+                  "name": "open",
+                  "type": "bool",
+                  "internalType": "bool"
+                },
+                {
+                  "name": "minimal",
+                  "type": "bool",
+                  "internalType": "bool"
+                },
+                {
+                  "name": "price",
+                  "type": "uint256",
+                  "internalType": "uint256"
+                },
+                {
+                  "name": "receiver",
+                  "type": "tuple",
+                  "internalType": "struct IOpenReceiverInfos.ReceiverInfos",
+                  "components": [
+                    {
+                      "name": "account",
+                      "type": "address",
+                      "internalType": "address"
+                    },
+                    {
+                      "name": "fee",
+                      "type": "uint96",
+                      "internalType": "uint96"
+                    },
+                    {
+                      "name": "minimum",
+                      "type": "uint256",
+                      "internalType": "uint256"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "count",
+              "type": "uint256",
+              "internalType": "uint256"
+            },
+            {
+              "name": "total",
+              "type": "uint256",
+              "internalType": "uint256"
+            }
+          ],
+          "stateMutability": "view"
+        },
+        {
+          "type": "function",
+          "name": "getOpenNFTsNftInfos",
+          "inputs": [
+            {
+              "name": "collection",
+              "type": "address",
+              "internalType": "address"
+            },
+            {
+              "name": "tokenID",
+              "type": "uint256",
+              "internalType": "uint256"
+            },
+            {
+              "name": "account",
+              "type": "address",
+              "internalType": "address"
+            }
+          ],
+          "outputs": [
+            {
+              "name": "nftInfos",
+              "type": "tuple",
+              "internalType": "struct IERCNftInfos.NftInfos",
+              "components": [
+                {
+                  "name": "tokenID",
+                  "type": "uint256",
+                  "internalType": "uint256"
+                },
+                {
+                  "name": "tokenURI",
+                  "type": "string",
+                  "internalType": "string"
+                },
+                {
+                  "name": "owner",
+                  "type": "address",
+                  "internalType": "address"
+                },
+                {
+                  "name": "approved",
+                  "type": "address",
+                  "internalType": "address"
+                },
+                {
+                  "name": "balanceOf",
+                  "type": "uint256",
+                  "internalType": "uint256"
+                },
+                {
+                  "name": "erc",
+                  "type": "uint8",
+                  "internalType": "enum IERCNftInfos.NftType"
+                }
+              ]
+            },
+            {
+              "name": "openNTFsNftInfos",
+              "type": "tuple",
+              "internalType": "struct IOpenNFTsInfos.OpenNFTsNftInfos",
+              "components": [
+                {
+                  "name": "price",
+                  "type": "uint256",
+                  "internalType": "uint256"
+                },
+                {
+                  "name": "receiver",
+                  "type": "tuple",
+                  "internalType": "struct IOpenReceiverInfos.ReceiverInfos",
+                  "components": [
+                    {
+                      "name": "account",
+                      "type": "address",
+                      "internalType": "address"
+                    },
+                    {
+                      "name": "fee",
+                      "type": "uint96",
+                      "internalType": "uint96"
+                    },
+                    {
+                      "name": "minimum",
+                      "type": "uint256",
+                      "internalType": "uint256"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "collectionInfos",
+              "type": "tuple",
+              "internalType": "struct IERCNftInfos.CollectionInfos",
+              "components": [
+                {
+                  "name": "collection",
+                  "type": "address",
+                  "internalType": "address"
+                },
+                {
+                  "name": "owner",
+                  "type": "address",
+                  "internalType": "address"
+                },
+                {
+                  "name": "name",
+                  "type": "string",
+                  "internalType": "string"
+                },
+                {
+                  "name": "symbol",
+                  "type": "string",
+                  "internalType": "string"
+                },
+                {
+                  "name": "totalSupply",
+                  "type": "uint256",
+                  "internalType": "uint256"
+                },
+                {
+                  "name": "balanceOf",
+                  "type": "uint256",
+                  "internalType": "uint256"
+                },
+                {
+                  "name": "approvedForAll",
+                  "type": "bool",
+                  "internalType": "bool"
+                },
+                {
+                  "name": "supported",
+                  "type": "bool[]",
+                  "internalType": "bool[]"
+                },
+                {
+                  "name": "erc",
+                  "type": "uint8",
+                  "internalType": "enum IERCNftInfos.NftType"
+                }
+              ]
+            }
+          ],
+          "stateMutability": "view"
+        },
+        {
+          "type": "function",
+          "name": "getOpenNFTsNftsInfos",
+          "inputs": [
+            {
+              "name": "collection",
+              "type": "address",
+              "internalType": "address"
+            },
+            {
+              "name": "tokenIDs",
+              "type": "uint256[]",
+              "internalType": "uint256[]"
+            },
+            {
+              "name": "account",
+              "type": "address",
+              "internalType": "address"
+            }
+          ],
+          "outputs": [
+            {
+              "name": "nftInfos",
+              "type": "tuple[]",
+              "internalType": "struct IERCNftInfos.NftInfos[]",
+              "components": [
+                {
+                  "name": "tokenID",
+                  "type": "uint256",
+                  "internalType": "uint256"
+                },
+                {
+                  "name": "tokenURI",
+                  "type": "string",
+                  "internalType": "string"
+                },
+                {
+                  "name": "owner",
+                  "type": "address",
+                  "internalType": "address"
+                },
+                {
+                  "name": "approved",
+                  "type": "address",
+                  "internalType": "address"
+                },
+                {
+                  "name": "balanceOf",
+                  "type": "uint256",
+                  "internalType": "uint256"
+                },
+                {
+                  "name": "erc",
+                  "type": "uint8",
+                  "internalType": "enum IERCNftInfos.NftType"
+                }
+              ]
+            },
+            {
+              "name": "openNTFsNftInfos",
+              "type": "tuple[]",
+              "internalType": "struct IOpenNFTsInfos.OpenNFTsNftInfos[]",
+              "components": [
+                {
+                  "name": "price",
+                  "type": "uint256",
+                  "internalType": "uint256"
+                },
+                {
+                  "name": "receiver",
+                  "type": "tuple",
+                  "internalType": "struct IOpenReceiverInfos.ReceiverInfos",
+                  "components": [
+                    {
+                      "name": "account",
+                      "type": "address",
+                      "internalType": "address"
+                    },
+                    {
+                      "name": "fee",
+                      "type": "uint96",
+                      "internalType": "uint96"
+                    },
+                    {
+                      "name": "minimum",
+                      "type": "uint256",
+                      "internalType": "uint256"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "collectionInfos",
+              "type": "tuple",
+              "internalType": "struct IERCNftInfos.CollectionInfos",
+              "components": [
+                {
+                  "name": "collection",
+                  "type": "address",
+                  "internalType": "address"
+                },
+                {
+                  "name": "owner",
+                  "type": "address",
+                  "internalType": "address"
+                },
+                {
+                  "name": "name",
+                  "type": "string",
+                  "internalType": "string"
+                },
+                {
+                  "name": "symbol",
+                  "type": "string",
+                  "internalType": "string"
+                },
+                {
+                  "name": "totalSupply",
+                  "type": "uint256",
+                  "internalType": "uint256"
+                },
+                {
+                  "name": "balanceOf",
+                  "type": "uint256",
+                  "internalType": "uint256"
+                },
+                {
+                  "name": "approvedForAll",
+                  "type": "bool",
+                  "internalType": "bool"
+                },
+                {
+                  "name": "supported",
+                  "type": "bool[]",
+                  "internalType": "bool[]"
+                },
+                {
+                  "name": "erc",
+                  "type": "uint8",
+                  "internalType": "enum IERCNftInfos.NftType"
+                }
+              ]
+            }
+          ],
+          "stateMutability": "view"
+        },
+        {
+          "type": "function",
+          "name": "getOpenNFTsNftsInfos",
+          "inputs": [
+            {
+              "name": "collection",
+              "type": "address",
+              "internalType": "address"
+            },
+            {
+              "name": "account",
+              "type": "address",
+              "internalType": "address"
+            },
+            {
+              "name": "limit",
+              "type": "uint256",
+              "internalType": "uint256"
+            },
+            {
+              "name": "offset",
+              "type": "uint256",
+              "internalType": "uint256"
+            }
+          ],
+          "outputs": [
+            {
+              "name": "nftInfos",
+              "type": "tuple[]",
+              "internalType": "struct IERCNftInfos.NftInfos[]",
+              "components": [
+                {
+                  "name": "tokenID",
+                  "type": "uint256",
+                  "internalType": "uint256"
+                },
+                {
+                  "name": "tokenURI",
+                  "type": "string",
+                  "internalType": "string"
+                },
+                {
+                  "name": "owner",
+                  "type": "address",
+                  "internalType": "address"
+                },
+                {
+                  "name": "approved",
+                  "type": "address",
+                  "internalType": "address"
+                },
+                {
+                  "name": "balanceOf",
+                  "type": "uint256",
+                  "internalType": "uint256"
+                },
+                {
+                  "name": "erc",
+                  "type": "uint8",
+                  "internalType": "enum IERCNftInfos.NftType"
+                }
+              ]
+            },
+            {
+              "name": "openNTFsNftInfos",
+              "type": "tuple[]",
+              "internalType": "struct IOpenNFTsInfos.OpenNFTsNftInfos[]",
+              "components": [
+                {
+                  "name": "price",
+                  "type": "uint256",
+                  "internalType": "uint256"
+                },
+                {
+                  "name": "receiver",
+                  "type": "tuple",
+                  "internalType": "struct IOpenReceiverInfos.ReceiverInfos",
+                  "components": [
+                    {
+                      "name": "account",
+                      "type": "address",
+                      "internalType": "address"
+                    },
+                    {
+                      "name": "fee",
+                      "type": "uint96",
+                      "internalType": "uint96"
+                    },
+                    {
+                      "name": "minimum",
+                      "type": "uint256",
+                      "internalType": "uint256"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "collectionInfos",
+              "type": "tuple",
+              "internalType": "struct IERCNftInfos.CollectionInfos",
+              "components": [
+                {
+                  "name": "collection",
+                  "type": "address",
+                  "internalType": "address"
+                },
+                {
+                  "name": "owner",
+                  "type": "address",
+                  "internalType": "address"
+                },
+                {
+                  "name": "name",
+                  "type": "string",
+                  "internalType": "string"
+                },
+                {
+                  "name": "symbol",
+                  "type": "string",
+                  "internalType": "string"
+                },
+                {
+                  "name": "totalSupply",
+                  "type": "uint256",
+                  "internalType": "uint256"
+                },
+                {
+                  "name": "balanceOf",
+                  "type": "uint256",
+                  "internalType": "uint256"
+                },
+                {
+                  "name": "approvedForAll",
+                  "type": "bool",
+                  "internalType": "bool"
+                },
+                {
+                  "name": "supported",
+                  "type": "bool[]",
+                  "internalType": "bool[]"
+                },
+                {
+                  "name": "erc",
+                  "type": "uint8",
+                  "internalType": "enum IERCNftInfos.NftType"
+                }
+              ]
+            },
+            {
+              "name": "count",
+              "type": "uint256",
+              "internalType": "uint256"
+            },
+            {
+              "name": "total",
+              "type": "uint256",
+              "internalType": "uint256"
+            }
+          ],
+          "stateMutability": "view"
+        },
+        {
+          "type": "function",
+          "name": "isCollection",
+          "inputs": [
+            {
+              "name": "smartcontract",
+              "type": "address",
+              "internalType": "address"
+            }
+          ],
+          "outputs": [
+            {
+              "name": "",
+              "type": "bool",
+              "internalType": "bool"
+            }
+          ],
+          "stateMutability": "view"
+        },
+        {
+          "type": "function",
+          "name": "isCollections",
+          "inputs": [
+            {
+              "name": "smartcontracts",
+              "type": "address[]",
+              "internalType": "address[]"
+            }
+          ],
+          "outputs": [
+            {
+              "name": "checks",
+              "type": "bool[]",
+              "internalType": "bool[]"
+            }
+          ],
+          "stateMutability": "view"
+        },
+        {
+          "type": "function",
+          "name": "isRegistered",
+          "inputs": [
+            {
+              "name": "addr",
+              "type": "address",
+              "internalType": "address"
+            }
+          ],
+          "outputs": [
+            {
+              "name": "",
+              "type": "bool",
+              "internalType": "bool"
+            }
+          ],
+          "stateMutability": "view"
+        },
+        {
+          "type": "function",
+          "name": "owner",
+          "inputs": [],
+          "outputs": [
+            {
+              "name": "",
+              "type": "address",
+              "internalType": "address"
+            }
+          ],
+          "stateMutability": "view"
+        },
+        {
+          "type": "function",
+          "name": "registerer",
+          "inputs": [],
+          "outputs": [
+            {
+              "name": "",
+              "type": "address",
+              "internalType": "address"
+            }
+          ],
+          "stateMutability": "view"
+        },
+        {
+          "type": "function",
+          "name": "removeAddress",
+          "inputs": [
+            {
+              "name": "addr",
+              "type": "address",
+              "internalType": "address"
+            }
+          ],
+          "outputs": [],
+          "stateMutability": "nonpayable"
+        },
+        {
+          "type": "function",
+          "name": "setRegisterer",
+          "inputs": [
+            {
+              "name": "registerer_",
+              "type": "address",
+              "internalType": "address"
+            }
+          ],
+          "outputs": [],
+          "stateMutability": "nonpayable"
+        },
+        {
+          "type": "function",
+          "name": "supportsInterface",
+          "inputs": [
+            {
+              "name": "interfaceId",
+              "type": "bytes4",
+              "internalType": "bytes4"
+            }
+          ],
+          "outputs": [
+            {
+              "name": "",
+              "type": "bool",
+              "internalType": "bool"
+            }
+          ],
+          "stateMutability": "view"
+        },
+        {
+          "type": "function",
+          "name": "transferOwnership",
+          "inputs": [
+            {
+              "name": "newOwner",
+              "type": "address",
+              "internalType": "address"
+            }
+          ],
+          "outputs": [],
+          "stateMutability": "nonpayable"
+        },
+        {
+          "type": "event",
+          "name": "OwnershipTransferred",
+          "inputs": [
+            {
+              "name": "previousOwner",
+              "type": "address",
+              "indexed": true,
+              "internalType": "address"
+            },
+            {
+              "name": "newOwner",
+              "type": "address",
+              "indexed": true,
+              "internalType": "address"
+            }
+          ],
+          "anonymous": false
+        }
+      ]
+    },
+    "OpenNFTsV4": {
+      "address": "0x31A65C6d4EB07ad51E7afc890aC3b7bE84dF2Ead",
+      "abi": [
+        {
+          "type": "function",
+          "name": "approve",
+          "inputs": [
+            {
+              "name": "spender",
+              "type": "address",
+              "internalType": "address"
+            },
+            {
+              "name": "tokenID",
+              "type": "uint256",
+              "internalType": "uint256"
+            }
+          ],
+          "outputs": [],
+          "stateMutability": "nonpayable"
+        },
+        {
+          "type": "function",
+          "name": "balanceOf",
+          "inputs": [
+            {
+              "name": "owner",
+              "type": "address",
+              "internalType": "address"
+            }
+          ],
+          "outputs": [
+            {
+              "name": "",
+              "type": "uint256",
+              "internalType": "uint256"
+            }
+          ],
+          "stateMutability": "view"
+        },
+        {
+          "type": "function",
+          "name": "burn",
+          "inputs": [
+            {
+              "name": "tokenID",
+              "type": "uint256",
+              "internalType": "uint256"
+            }
+          ],
+          "outputs": [],
+          "stateMutability": "nonpayable"
+        },
+        {
+          "type": "function",
+          "name": "getApproved",
+          "inputs": [
+            {
+              "name": "tokenID",
+              "type": "uint256",
+              "internalType": "uint256"
+            }
+          ],
+          "outputs": [
+            {
+              "name": "",
+              "type": "address",
+              "internalType": "address"
+            }
+          ],
+          "stateMutability": "view"
+        },
+        {
+          "type": "function",
+          "name": "initialize",
+          "inputs": [
+            {
+              "name": "name_",
+              "type": "string",
+              "internalType": "string"
+            },
+            {
+              "name": "symbol_",
+              "type": "string",
+              "internalType": "string"
+            },
+            {
+              "name": "owner_",
+              "type": "address",
+              "internalType": "address"
+            },
+            {
+              "name": "params_",
+              "type": "bytes",
+              "internalType": "bytes"
+            }
+          ],
+          "outputs": [],
+          "stateMutability": "nonpayable"
+        },
+        {
+          "type": "function",
+          "name": "initialized",
+          "inputs": [],
+          "outputs": [
+            {
+              "name": "",
+              "type": "bool",
+              "internalType": "bool"
+            }
+          ],
+          "stateMutability": "view"
+        },
+        {
+          "type": "function",
+          "name": "isApprovedForAll",
+          "inputs": [
+            {
+              "name": "owner",
+              "type": "address",
+              "internalType": "address"
+            },
+            {
+              "name": "operator",
+              "type": "address",
+              "internalType": "address"
+            }
+          ],
+          "outputs": [
+            {
+              "name": "",
+              "type": "bool",
+              "internalType": "bool"
+            }
+          ],
+          "stateMutability": "view"
+        },
+        {
+          "type": "function",
+          "name": "mint",
+          "inputs": [
+            {
+              "name": "minter",
+              "type": "address",
+              "internalType": "address"
+            },
+            {
+              "name": "tokenURI_",
+              "type": "string",
+              "internalType": "string"
+            }
+          ],
+          "outputs": [
+            {
+              "name": "tokenID",
+              "type": "uint256",
+              "internalType": "uint256"
+            }
+          ],
+          "stateMutability": "nonpayable"
+        },
+        {
+          "type": "function",
+          "name": "mint",
+          "inputs": [
+            {
+              "name": "tokenURI_",
+              "type": "string",
+              "internalType": "string"
+            }
+          ],
+          "outputs": [
+            {
+              "name": "tokenID",
+              "type": "uint256",
+              "internalType": "uint256"
+            }
+          ],
+          "stateMutability": "nonpayable"
+        },
+        {
+          "type": "function",
+          "name": "name",
+          "inputs": [],
+          "outputs": [
+            {
+              "name": "",
+              "type": "string",
+              "internalType": "string"
+            }
+          ],
+          "stateMutability": "view"
+        },
+        {
+          "type": "function",
+          "name": "open",
+          "inputs": [],
+          "outputs": [
+            {
+              "name": "",
+              "type": "bool",
+              "internalType": "bool"
+            }
+          ],
+          "stateMutability": "view"
+        },
+        {
+          "type": "function",
+          "name": "owner",
+          "inputs": [],
+          "outputs": [
+            {
+              "name": "",
+              "type": "address",
+              "internalType": "address"
+            }
+          ],
+          "stateMutability": "view"
+        },
+        {
+          "type": "function",
+          "name": "ownerOf",
+          "inputs": [
+            {
+              "name": "tokenID",
+              "type": "uint256",
+              "internalType": "uint256"
+            }
+          ],
+          "outputs": [
+            {
+              "name": "",
+              "type": "address",
+              "internalType": "address"
+            }
+          ],
+          "stateMutability": "view"
+        },
+        {
+          "type": "function",
+          "name": "parent",
+          "inputs": [],
+          "outputs": [
+            {
+              "name": "parent_",
+              "type": "address",
+              "internalType": "address"
+            }
+          ],
+          "stateMutability": "view"
+        },
+        {
+          "type": "function",
+          "name": "safeTransferFrom",
+          "inputs": [
+            {
+              "name": "from",
+              "type": "address",
+              "internalType": "address"
+            },
+            {
+              "name": "to",
+              "type": "address",
+              "internalType": "address"
+            },
+            {
+              "name": "tokenID",
+              "type": "uint256",
+              "internalType": "uint256"
+            }
+          ],
+          "outputs": [],
+          "stateMutability": "payable"
+        },
+        {
+          "type": "function",
+          "name": "safeTransferFrom",
+          "inputs": [
+            {
+              "name": "from",
+              "type": "address",
+              "internalType": "address"
+            },
+            {
+              "name": "to",
+              "type": "address",
+              "internalType": "address"
+            },
+            {
+              "name": "tokenID",
+              "type": "uint256",
+              "internalType": "uint256"
+            },
+            {
+              "name": "data",
+              "type": "bytes",
+              "internalType": "bytes"
+            }
+          ],
+          "outputs": [],
+          "stateMutability": "payable"
+        },
+        {
+          "type": "function",
+          "name": "setApprovalForAll",
+          "inputs": [
+            {
+              "name": "operator",
+              "type": "address",
+              "internalType": "address"
+            },
+            {
+              "name": "approved",
+              "type": "bool",
+              "internalType": "bool"
+            }
+          ],
+          "outputs": [],
+          "stateMutability": "nonpayable"
+        },
+        {
+          "type": "function",
+          "name": "supportsInterface",
+          "inputs": [
+            {
+              "name": "interfaceId",
+              "type": "bytes4",
+              "internalType": "bytes4"
+            }
+          ],
+          "outputs": [
+            {
+              "name": "",
+              "type": "bool",
+              "internalType": "bool"
+            }
+          ],
+          "stateMutability": "view"
+        },
+        {
+          "type": "function",
+          "name": "symbol",
+          "inputs": [],
+          "outputs": [
+            {
+              "name": "",
+              "type": "string",
+              "internalType": "string"
+            }
+          ],
+          "stateMutability": "view"
+        },
+        {
+          "type": "function",
+          "name": "template",
+          "inputs": [],
+          "outputs": [
+            {
+              "name": "",
+              "type": "string",
+              "internalType": "string"
+            }
+          ],
+          "stateMutability": "view"
+        },
+        {
+          "type": "function",
+          "name": "tokenByIndex",
+          "inputs": [
+            {
+              "name": "index",
+              "type": "uint256",
+              "internalType": "uint256"
+            }
+          ],
+          "outputs": [
+            {
+              "name": "",
+              "type": "uint256",
+              "internalType": "uint256"
+            }
+          ],
+          "stateMutability": "view"
+        },
+        {
+          "type": "function",
+          "name": "tokenIdNext",
+          "inputs": [],
+          "outputs": [
+            {
+              "name": "",
+              "type": "uint256",
+              "internalType": "uint256"
+            }
+          ],
+          "stateMutability": "view"
+        },
+        {
+          "type": "function",
+          "name": "tokenOfOwnerByIndex",
+          "inputs": [
+            {
+              "name": "owner",
+              "type": "address",
+              "internalType": "address"
+            },
+            {
+              "name": "index",
+              "type": "uint256",
+              "internalType": "uint256"
+            }
+          ],
+          "outputs": [
+            {
+              "name": "",
+              "type": "uint256",
+              "internalType": "uint256"
+            }
+          ],
+          "stateMutability": "view"
+        },
+        {
+          "type": "function",
+          "name": "tokenURI",
+          "inputs": [
+            {
+              "name": "tokenID",
+              "type": "uint256",
+              "internalType": "uint256"
+            }
+          ],
+          "outputs": [
+            {
+              "name": "",
+              "type": "string",
+              "internalType": "string"
+            }
+          ],
+          "stateMutability": "view"
+        },
+        {
+          "type": "function",
+          "name": "totalSupply",
+          "inputs": [],
+          "outputs": [
+            {
+              "name": "",
+              "type": "uint256",
+              "internalType": "uint256"
+            }
+          ],
+          "stateMutability": "view"
+        },
+        {
+          "type": "function",
+          "name": "transferFrom",
+          "inputs": [
+            {
+              "name": "from",
+              "type": "address",
+              "internalType": "address"
+            },
+            {
+              "name": "to",
+              "type": "address",
+              "internalType": "address"
+            },
+            {
+              "name": "tokenID",
+              "type": "uint256",
+              "internalType": "uint256"
+            }
+          ],
+          "outputs": [],
+          "stateMutability": "payable"
+        },
+        {
+          "type": "function",
+          "name": "transferOwnership",
+          "inputs": [
+            {
+              "name": "newOwner",
+              "type": "address",
+              "internalType": "address"
+            }
+          ],
+          "outputs": [],
+          "stateMutability": "nonpayable"
+        },
+        {
+          "type": "function",
+          "name": "version",
+          "inputs": [],
+          "outputs": [
+            {
+              "name": "",
+              "type": "uint256",
+              "internalType": "uint256"
+            }
+          ],
+          "stateMutability": "view"
+        },
+        {
+          "type": "event",
+          "name": "Approval",
+          "inputs": [
+            {
+              "name": "owner",
+              "type": "address",
+              "indexed": true,
+              "internalType": "address"
+            },
+            {
+              "name": "approved",
+              "type": "address",
+              "indexed": true,
+              "internalType": "address"
+            },
+            {
+              "name": "tokenId",
+              "type": "uint256",
+              "indexed": true,
+              "internalType": "uint256"
+            }
+          ],
+          "anonymous": false
+        },
+        {
+          "type": "event",
+          "name": "ApprovalForAll",
+          "inputs": [
+            {
+              "name": "owner",
+              "type": "address",
+              "indexed": true,
+              "internalType": "address"
+            },
+            {
+              "name": "operator",
+              "type": "address",
+              "indexed": true,
+              "internalType": "address"
+            },
+            {
+              "name": "approved",
+              "type": "bool",
+              "indexed": false,
+              "internalType": "bool"
+            }
+          ],
+          "anonymous": false
+        },
+        {
+          "type": "event",
+          "name": "OwnershipTransferred",
+          "inputs": [
+            {
+              "name": "previousOwner",
+              "type": "address",
+              "indexed": true,
+              "internalType": "address"
+            },
+            {
+              "name": "newOwner",
+              "type": "address",
+              "indexed": true,
+              "internalType": "address"
+            }
+          ],
+          "anonymous": false
+        },
+        {
+          "type": "event",
+          "name": "Transfer",
+          "inputs": [
+            {
+              "name": "from",
+              "type": "address",
+              "indexed": true,
+              "internalType": "address"
+            },
+            {
+              "name": "to",
+              "type": "address",
+              "indexed": true,
+              "internalType": "address"
+            },
+            {
+              "name": "tokenId",
+              "type": "uint256",
+              "indexed": true,
+              "internalType": "uint256"
+            }
+          ],
+          "anonymous": false
+        }
+      ]
+    },
     "YourContract": {
       "address": "0x9bAaB117304f7D6517048e371025dB8f89a8DbE5",
       "abi": [

@@ -8,22 +8,23 @@ import {OpenNFTsV4} from "src/OpenNFTsV4.sol";
 
 contract DeployOpenNFTsV4 is DeployLite {
     function deployOpenNFTsV4() public returns (address) {
+        address sender = vm.envAddress("SENDER");
         address openNFTsFactoryV3 = readAddress("OpenNFTsFactoryV3");
 
         require(
-            msg.sender == OpenNFTsFactoryV3(openNFTsFactoryV3).owner(), "Deployer must be OpenNFTsFactoryV3 owner !"
+            sender == OpenNFTsFactoryV3(openNFTsFactoryV3).owner(), "Deployer must be OpenNFTsFactoryV3 owner !"
         );
 
         DeployState state = deployState("OpenNFTsV4");
 
         if (state == DeployState.None) {
-            vm.startBroadcast(msg.sender);
+            vm.startBroadcast(sender);
             address openNFTsV4 = deploy("OpenNFTsV4", "");
 
             bool[] memory options = new bool[](1);
             options[0] = true;
             OpenNFTsV4(openNFTsV4).initialize(
-                "OpenNFTsV4", "ONFT", msg.sender, abi.encode(abi.encode(0, address(0), 0, options), address(0), 0)
+                "OpenNFTsV4", "ONFT", sender, abi.encode(abi.encode(0, address(0), 0, options), address(0), 0)
             );
 
             OpenNFTsFactoryV3(openNFTsFactoryV3).setTemplate("OpenNFTsV4", openNFTsV4);
