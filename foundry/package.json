@@ -14,9 +14,9 @@
     "deploy:all": "forge script script/DeployAll.s.sol",
     "deploy:deploy": "pnpm deploy:all --fork-url $CHAIN --account $ACCOUNT --broadcast",
     "deploy:validate": "pnpm deploy:all --fork-url $CHAIN",
-    "deploy:anvil": "export CHAIN=anvil ACCOUNT=$ANVIL_ACCOUNT && pnpm deploy:deploy --password '' && pnpm run deploy:validate",
-    "deploy:testnet": "ACCOUNT=$TESTNET_ACCOUNT pnpm deploy:deploy --verify && pnpm run deploy:validate",
-    "deploy:mainnet": "ACCOUNT=$MAINNET_ACCOUNT pnpm deploy:deploy --verify && pnpm run deploy:validate",
+    "deploy:anvil": "export CHAIN=anvil SENDER=$ANVIL_SENDER ACCOUNT=$ANVIL_ACCOUNT && pnpm deploy:deploy --password '' && pnpm run deploy:validate",
+    "deploy:testnet": "SENDER=$TESTNET_SENDER ACCOUNT=$TESTNET_ACCOUNT pnpm deploy:deploy --verify && pnpm run deploy:validate",
+    "deploy:mainnet": "SENDER=$MAINNET_SENDER ACCOUNT=$MAINNET_ACCOUNT pnpm deploy:deploy --verify && pnpm run deploy:validate",
     "deploy:sepolia": "CHAIN=sepolia pnpm deploy:testnet",
     "deploy:optimism": "CHAIN=optimism pnpm deploy:mainnet"
   },

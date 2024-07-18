@@ -25,7 +25,7 @@
 		}
 
 		if (isAddress(searchInput)) {
-			goto(`/blockexplorer/address/${searchInput}`);
+			goto(`/blockexplorer/address#${searchInput}`);
 			return;
 		}
 	};

@@ -8,11 +8,11 @@
 
 	let { children, data }: { children: Snippet; data: { url: string } } = $props();
 
-	const baseUrl = $derived(data.url || `http://localhost:5173`);
+	const baseUrl = $derived(data.url || "");
 
 	const metadata = $derived({
-		title: "Scaffold-ETH 2 App",
-		description: "Built with 🏗 Scaffold-ETH 2",
+		title: "Scaffold-ETH Alt App",
+		description: "Built with 🏗 Scaffold-ETH Alt",
 		thumbnail: `${baseUrl}/thumbnail.jpg`,
 		favicon: "/favicon.png"
 	});
