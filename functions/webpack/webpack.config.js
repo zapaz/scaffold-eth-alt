@@ -1,7 +1,7 @@
 const path = require('path');
 
 module.exports = {
-  entry: './src/index.js',
+  entry: './src/ens.js',
   output: {
     library: {
       type: 'module',
@@ -9,7 +9,7 @@ module.exports = {
     filename: 'bundle.js',
     path: path.resolve(__dirname, 'dist'),
   },
-  mode: 'none',
+  mode: 'production',
   experiments: {
     outputModule: true,
   },

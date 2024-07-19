@@ -6,7 +6,8 @@
   "scripts": {
     "build": "webpack",
     "start": "serve dist",
-    "fleek": "webpack && fleek functions deploy --name bundled-function --path ./dist/bundle.js --noBundle"
+    "ens": "node test/ens.t.js",
+    "deploy:ens": "webpack && fleek functions deploy --name webpack-ens --path ./dist/bundle.js --noBundle"
   },
   "keywords": [],
   "author": "",
@@ -18,5 +19,6 @@
   },
   "dependencies": {
     "ethers": "^6.13.1"
-  }
+  },
+  "type": "module"
 }

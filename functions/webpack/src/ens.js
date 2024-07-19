@@ -3,7 +3,7 @@ import { JsonRpcProvider } from 'ethers';
 
 export const main = async ({ path }) => {
   try {
-    const ensDomain = path.slice(1) || 'vitalik.eth';
+    const ensDomain = path?.slice(1) || 'vitalik.eth';
 
     if (!(ensDomain.length >= 7 && ensDomain.endsWith('.eth'))) {
       throw new Error(`Invalid ENS domain: '${ensDomain}'`);

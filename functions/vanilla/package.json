@@ -1,0 +1,19 @@
+{
+  "name": "simple",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "bonjour": "node test/bonjour.t.js",
+    "elliptic": "node test/elliptic.t.js",
+    "deploy:bonjour": "fleek functions deploy --name bonjour --path ./src/bonjour.js",
+    "deploy:elliptic": "fleek functions deploy --name elliptic --path ./src/elliptic.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "elliptic": "^6.5.6"
+  },
+  "type": "module"
+}

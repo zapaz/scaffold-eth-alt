@@ -9,7 +9,7 @@ export const main = (params) => {
   const ec = new EC('secp256k1');
 
   // Your message hash to be signed
-  const msg = path.slice(1) || "Bonjour!";
+  const msg = path?.slice(1) || "Bonjour!";
 
   // Generate a random private key and derive the public key
   const key = ec.genKeyPair();
