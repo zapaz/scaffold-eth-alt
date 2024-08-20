@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "clean": "rm -rf node_modules out broadcast cache .turbo ",
-    "chain": "anvil",
+    "chain": "./anvil.sh",
     "format": "forge fmt",
     "check": "solhint src/**/*.sol",
     "build": "forge compile",
@@ -13,7 +13,7 @@
     "abis": "ts-node mergeAbis.ts",
     "deploy:all": "forge script script/DeployAll.s.sol",
     "deploy:deploy": "pnpm deploy:all --fork-url $CHAIN --account $ACCOUNT --broadcast",
-    "deploy:validate": "pnpm deploy:all --fork-url $CHAIN",
+    "deploy:validate": "pnpm deploy:all --fork-url $CHAIN && pnpm run abis",
     "deploy:anvil": "export CHAIN=anvil SENDER=$ANVIL_SENDER ACCOUNT=$ANVIL_ACCOUNT && pnpm deploy:deploy --password '' && pnpm run deploy:validate",
     "deploy:testnet": "SENDER=$TESTNET_SENDER ACCOUNT=$TESTNET_ACCOUNT pnpm deploy:deploy --verify && pnpm run deploy:validate",
     "deploy:mainnet": "SENDER=$MAINNET_SENDER ACCOUNT=$MAINNET_ACCOUNT pnpm deploy:deploy --verify && pnpm run deploy:validate",
@@ -25,12 +25,12 @@
   "license": "ISC",
   "devDependencies": {
     "@types/fs-extra": "^11.0.4",
-    "@types/node": "^20.14.10",
-    "eslint-plugin-json": "^4.0.0",
+    "@types/node": "^20.16.1",
+    "eslint-plugin-json": "^4.0.1",
     "fs-extra": "^11.2.0",
     "prettier": "^3.3.3",
-    "solhint": "^5.0.1",
+    "solhint": "^5.0.3",
     "ts-node": "^10.9.2",
-    "typescript": "^5.5.3"
+    "typescript": "^5.5.4"
   }
 }
