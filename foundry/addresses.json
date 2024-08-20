@@ -7,6 +7,8 @@
   "11155111": {
     "Counter": "0x82E519C4102F4da880BBf9d41c4153caa4719Fcf",
     "YourContract": "0xc0D919D6A472587311632F548264f4f3F181c16c",
+    "FunctionsConsumerExample": "0x8316C228e643297034EDE4dC648460403B953e96",
+    "Router": "0xb83E47C2bC239B3bf370bc41e1459A34b41238D0",
     "chainName": "sepolia"
   },
   "31337": {
