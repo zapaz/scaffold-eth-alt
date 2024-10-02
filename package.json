@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "all": "pnpm clean && pnpm install && pnpm chain && pnpm deploy:anvil && pnpm run dev",
     "clean": "pnpm -r clean && rm -rf node_modules pnpm-lock.yaml .turbo",
     "chain": "pnpm run --filter foundry chain",
     "deploy:anvil": "pnpm run --filter foundry deploy:anvil",
@@ -23,6 +24,6 @@
     "pnpm": "^9"
   },
   "devDependencies": {
-    "turbo": "^2.0.14"
+    "turbo": "^2.1.3"
   }
 }
