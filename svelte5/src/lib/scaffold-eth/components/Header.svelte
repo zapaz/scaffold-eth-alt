@@ -1,7 +1,7 @@
 <script lang="ts">
   import { page } from "$app/stores";
   import logo from "$lib/assets/logo.svg";
-  import { Bars3, BugAnt, Icon, type IconSource } from "svelte-hero-icons";
+  import { Bars3, BugAnt, Beaker, Icon, type IconSource } from "svelte-hero-icons";
   import { createOutsideClick, createTargetNetwork } from "$lib/scaffold-eth/runes";
   import { ConnectButton, FaucetButton } from "$lib/scaffold-eth/components";
   import { derived as derived4 } from "svelte/store";
@@ -34,6 +34,11 @@
       label: "Debug Contracts",
       href: "/debug",
       icon: BugAnt
+    },
+    {
+      label: "Tests",
+      href: "/tests",
+      icon: Beaker
     }
   ];
 
