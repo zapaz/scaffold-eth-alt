@@ -1,0 +1,10 @@
+{
+  "extends": ["//"],
+  "tasks": {
+    "build": {
+      "dependsOn": ["check", "@scaffold-eth-alt/foundry#deploy"],
+      "inputs": ["../foundry/addresses.json", "../foundry/out"],
+      "outputLogs": "new-only"
+    }
+  }
+}

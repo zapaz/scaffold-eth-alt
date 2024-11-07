@@ -1,6 +1,14 @@
 {
   "extends": "solhint:recommended",
   "rules": {
-    "no-console": "off"
+    "no-console": "off",
+    "func-visibility": [
+      "warn",
+      {
+        "ignoreConstructors": true
+      }
+    ],
+    "gas-custom-errors": "off",
+    "immutable-vars-naming": "off"
   }
 }

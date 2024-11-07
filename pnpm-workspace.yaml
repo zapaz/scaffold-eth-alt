@@ -1,3 +1,4 @@
 packages:
   - foundry
-  - sveltekit
+  - svelte5
+  - common
