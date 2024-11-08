@@ -36,6 +36,11 @@
       icon: BugAnt
     },
     {
+      label: "View Events",
+      href: "/events",
+      icon: Bars3
+    },
+    {
       label: "Tests",
       href: "/tests",
       icon: Beaker

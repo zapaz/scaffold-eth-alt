@@ -35,6 +35,19 @@
           ],
           "outputs": [],
           "stateMutability": "nonpayable"
+        },
+        {
+          "type": "event",
+          "name": "NumberChanged",
+          "inputs": [
+            {
+              "name": "newNumber",
+              "type": "uint256",
+              "indexed": false,
+              "internalType": "uint256"
+            }
+          ],
+          "anonymous": false
         }
       ]
     },
@@ -183,7 +196,7 @@
   },
   "31337": {
     "Counter": {
-      "address": "0x9bAaB117304f7D6517048e371025dB8f89a8DbE5",
+      "address": "0x31A65C6d4EB07ad51E7afc890aC3b7bE84dF2Ead",
       "abi": [
         {
           "type": "function",
@@ -217,6 +230,19 @@
           ],
           "outputs": [],
           "stateMutability": "nonpayable"
+        },
+        {
+          "type": "event",
+          "name": "NumberChanged",
+          "inputs": [
+            {
+              "name": "newNumber",
+              "type": "uint256",
+              "indexed": false,
+              "internalType": "uint256"
+            }
+          ],
+          "anonymous": false
         }
       ]
     },
@@ -399,6 +425,19 @@
           ],
           "outputs": [],
           "stateMutability": "nonpayable"
+        },
+        {
+          "type": "event",
+          "name": "NumberChanged",
+          "inputs": [
+            {
+              "name": "newNumber",
+              "type": "uint256",
+              "indexed": false,
+              "internalType": "uint256"
+            }
+          ],
+          "anonymous": false
         }
       ]
     },

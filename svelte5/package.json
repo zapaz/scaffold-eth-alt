@@ -4,6 +4,7 @@
     "@coinbase/wallet-sdk": "^4.2.2",
     "@fleek-platform/cli": "^3.7.3",
     "@scaffold-eth-alt/foundry": "workspace:^",
+    "@scaffold-eth-alt/common": "workspace:^",
     "@sveltejs/adapter-static": "^3.0.6",
     "@sveltejs/kit": "^2.8.0",
     "@sveltejs/vite-plugin-svelte": "^4.0.0",

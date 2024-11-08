@@ -47,6 +47,9 @@ importers:
       '@fleek-platform/cli':
         specifier: ^3.7.3
         version: 3.7.3(@types/node@22.9.0)(typescript@5.6.3)(undici@6.20.1)
+      '@scaffold-eth-alt/common':
+        specifier: workspace:^
+        version: link:../common
       '@scaffold-eth-alt/foundry':
         specifier: workspace:^
         version: link:../foundry
