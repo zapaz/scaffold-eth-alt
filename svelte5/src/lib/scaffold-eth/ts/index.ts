@@ -5,7 +5,6 @@ export * from "./contractsData";
 export * from "./decodeTxData";
 export * from "./fetchPriceFromUniswap";
 export * from "./getParsedError";
-export * from "./modal";
 export * from "./networks";
 export * from "./notification";
 export * from "../../scaffold.config";

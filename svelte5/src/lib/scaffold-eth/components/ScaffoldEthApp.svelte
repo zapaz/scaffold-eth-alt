@@ -2,7 +2,6 @@
   import { reconnect } from "@wagmi/core";
   import { untrack, type Snippet } from "svelte";
   import { wagmiConfig } from "$lib/wagmi/ts";
-  import { modal } from "$lib/scaffold-eth/ts";
   import { setNativeCurrencyPrice, createNativeCurrencyPrice, createDarkMode } from "$lib/scaffold-eth/runes";
   import { Header, Footer } from "$lib/scaffold-eth/components";
 
@@ -21,10 +20,6 @@
   });
 
   const { isDarkMode } = $derived.by(createDarkMode());
-
-  $effect(() => {
-    modal.setThemeMode(isDarkMode ? "dark" : "light");
-  });
 </script>
 
 <div class="flex min-h-screen flex-col">
