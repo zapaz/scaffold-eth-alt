@@ -1,28 +1,24 @@
 {
   "name": "scaffold-eth-alt",
-  "version": "0.0.3",
-  "description": "",
+  "version": "0.1.1",
+  "description": "Alternative stack to scaffold-eth with Svelte5, foundry, pnpm, turbo, vite and fleek.xyz",
   "main": "index.js",
   "scripts": {
-    "clean": "pnpm -r clean && rm -rf node_modules pnpm-lock.yaml .turbo",
+    "all": "pnpm run clean && pnpm install && pnpm run chain && pnpm run deploy && turbo start",
+    "clean": "pnpm -r clean && rm -rf node_modules .turbo pnpm-lock.yaml",
     "chain": "pnpm run --filter foundry chain",
-    "deploy:anvil": "pnpm run --filter foundry deploy:anvil",
-    "deploy:sepolia": "pnpm run --filter foundry deploy:sepolia",
-    "deploy:optimism": "pnpm run --filter foundry deploy:optimism",
-    "deploy:fleek": "pnpm run --filter sveltekit deploy:fleek",
-    "dev": "pnpm run --filter sveltekit dev",
-    "start": "pnpm run dev",
-    "build": "turbo build"
+    "deploy": "pnpm run --filter foundry deploy:anvil",
+    "deploy:fleek": "pnpm run --filter svelte5 deploy:fleek"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "packageManager": "pnpm@9.4.0",
+  "packageManager": "pnpm@9.12.3",
   "engines": {
     "node": "^20",
     "pnpm": "^9"
   },
   "devDependencies": {
-    "turbo": "^2.0.6"
+    "turbo": "^2.2.3"
   }
 }
