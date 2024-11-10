@@ -1,6 +1,6 @@
 {
   "name": "scaffold-eth-alt",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Alternative stack to scaffold-eth with Svelte5, foundry, pnpm, turbo, vite and fleek.xyz",
   "main": "index.js",
   "scripts": {
