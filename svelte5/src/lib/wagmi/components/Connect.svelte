@@ -1,16 +1,32 @@
 <script lang="ts">
   import { type Config, createConfig, connect, http } from "@wagmi/core";
   import { mainnet, baseSepolia, optimismSepolia } from "viem/chains";
-  import { injected, metaMask, coinbaseWallet, walletConnect as walletConnectFunc } from "@wagmi/connectors";
+  import {
+    injected,
+    metaMask,
+    coinbaseWallet,
+    // safe as safeFunc,
+    walletConnect as walletConnectFunc
+  } from "@wagmi/connectors";
   import scaffoldConfig from "$lib/scaffold.config";
   import type { Address } from "viem";
 
-  const walletConnect = () => walletConnectFunc({ projectId: scaffoldConfig.walletConnectProjectId });
+  let {
+    chainId = $bindable(),
+    address = $bindable(),
+    name = $bindable()
+  }: { chainId?: number; address?: Address; name?: string } = $props();
 
-  const connectors = [injected(), metaMask(), coinbaseWallet(), walletConnect()];
-  type Connector = (typeof connectors)[number];
+  let buttonSelected = $state("btn-default");
 
   const chains = [mainnet, baseSepolia, optimismSepolia] as const;
+
+  const walletConnect = () => walletConnectFunc({ projectId: scaffoldConfig.walletConnectProjectId });
+  // const safe = () => safeFunc({  allowedDomains: [/gnosis-safe.io$/, /app.safe.global$/], debug: true });
+
+  const connectors = [injected(), metaMask(), coinbaseWallet(), walletConnect()]; //, safe()];
+  type Connector = (typeof connectors)[number];
+
   const transports = {
     [mainnet.id]: http(),
     [baseSepolia.id]: http(),
@@ -23,21 +39,17 @@
     connectModal = document.getElementById("connect-modal") as HTMLInputElement;
   });
 
-  let walletChainId: number | undefined = $state();
-  let walletAddress: Address | undefined = $state();
-  let walletName: string | undefined = $state();
-
   const connectWallet = async (connectorFunc: () => Connector) => {
     if (connectModal) connectModal.checked = false;
-    walletName = connectorFunc.name;
-    console.log("connectWallet ~ connector:", walletName);
+
+    name = connectorFunc.name;
+    chainId = undefined;
+    address = undefined;
 
     const wallet = await connect(config, { connector: connectorFunc() });
-    console.log("connectWal ~ wallet:", wallet);
 
-    walletChainId = wallet.chainId;
-    walletAddress = wallet.accounts[0];
-    console.log("connectWallet ~ connect:", walletChainId, walletAddress);
+    chainId = wallet.chainId;
+    address = wallet.accounts[0];
   };
 </script>
 
@@ -50,17 +62,23 @@
     <h3 class="mb-3 text-xl font-bold text-center">Connect Wallet</h3>
     <label for="connect-modal" class="btn btn-circle btn-ghost btn-sm absolute right-3 top-3 text-xl"> &times; </label>
     <ul class="space-y-4 text-center">
-      {@render connectBlock(injected, "rabby", "Injected Wallet")}
-      {@render connectBlock(metaMask, "metaMask", "Metamask")}
-      {@render connectBlock(coinbaseWallet, "coinbase", "Coinbase Wallet")}
-      {@render connectBlock(walletConnect, "walletConnect", "WalletConnect")}
+      {@render connectBlock(injected, "Injected Wallet")}
+      {@render connectBlock(metaMask, "Metamask")}
+      {@render connectBlock(coinbaseWallet, "Coinbase Wallet")}
+      {@render connectBlock(walletConnect, "WalletConnect")}
+      <!-- {@render connectBlock(safe, "Safe Wallet")} -->
     </ul>
   </label>
 </label>
 
-{#snippet connectBlock(connectFunc: () => Connector, connectName: string, connectTitle: string)}
+{#snippet connectBlock(connectFunc: () => Connector, connectTitle: string)}
   <li class="flex align-center">
-    <img src="/{connectName}.svg" alt={connectTitle} class="w-8 h-8 mr-2" />
-    <button class="btn btn-default btn-sm w-40" onclick={() => connectWallet(connectFunc)}> {connectTitle} </button>
+    <img src="/{connectFunc.name}.svg" alt={connectTitle} class="w-8 h-8 mr-2" />
+    <button
+      class="btn btn-default btn-sm w-40 {name === connectFunc.name ? 'btn-accent' : ''}"
+      onclick={() => connectWallet(connectFunc)}
+    >
+      {connectTitle}
+    </button>
   </li>
 {/snippet}
