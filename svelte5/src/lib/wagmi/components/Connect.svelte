@@ -24,8 +24,16 @@
   const walletConnect = () => walletConnectFunc({ projectId: scaffoldConfig.walletConnectProjectId });
   // const safe = () => safeFunc({  allowedDomains: [/gnosis-safe.io$/, /app.safe.global$/], debug: true });
 
-  const connectors = [injected(), metaMask(), coinbaseWallet(), walletConnect()]; //, safe()];
-  type Connector = (typeof connectors)[number];
+  type Connector = () => any;
+  type ConnectorMap = { connector: Connector; title: string };
+  const connectorsMap: Map<string, ConnectorMap> = new Map([
+    ["injected", { connector: injected, title: "Injected Wallet" }],
+    ["metaMask", { connector: metaMask, title: "Metamask" }],
+    ["coinbaseWallet", { connector: coinbaseWallet, title: "Coinbase Wallet" }],
+    ["walletConnect", { connector: walletConnect, title: "WalletConnect" }]
+    // ["safe", { connector: safe, title: "Safe" }]
+  ]);
+  const connectors = [...connectorsMap].map(([, item]) => item.connector);
 
   const transports = {
     [mainnet.id]: http(),
@@ -62,23 +70,26 @@
     <h3 class="mb-3 text-xl font-bold text-center">Connect Wallet</h3>
     <label for="connect-modal" class="btn btn-circle btn-ghost btn-sm absolute right-3 top-3 text-xl"> &times; </label>
     <ul class="space-y-4 text-center">
-      {@render connectBlock(injected, "Injected Wallet")}
-      {@render connectBlock(metaMask, "Metamask")}
-      {@render connectBlock(coinbaseWallet, "Coinbase Wallet")}
-      {@render connectBlock(walletConnect, "WalletConnect")}
+      {@render connectBlock("injected")}
+      {@render connectBlock("metaMask")}
+      {@render connectBlock("coinbaseWallet")}
+      {@render connectBlock("walletConnect")}
       <!-- {@render connectBlock(safe, "Safe Wallet")} -->
     </ul>
   </label>
 </label>
 
-{#snippet connectBlock(connectFunc: () => Connector, connectTitle: string)}
-  <li class="flex align-center">
-    <img src="/{connectFunc.name}.svg" alt={connectTitle} class="w-8 h-8 mr-2" />
-    <button
-      class="btn btn-default btn-sm w-40 {name === connectFunc.name ? 'btn-accent' : ''}"
-      onclick={() => connectWallet(connectFunc)}
-    >
-      {connectTitle}
-    </button>
-  </li>
+{#snippet connectBlock(connectorName: string)}
+  {@const connectorMap = connectorsMap.get(connectorName)}
+  {#if connectorMap}
+    <li class="flex align-center">
+      <img src="/{connectorName}.svg" alt={connectorMap.title} class="w-8 h-8 mr-2" />
+      <button
+        class="btn btn-default btn-sm w-40 {name === connectorName ? 'btn-accent' : ''}"
+        onclick={() => connectWallet(connectorMap.connector)}
+      >
+        {connectorMap.title}
+      </button>
+    </li>
+  {/if}
 {/snippet}

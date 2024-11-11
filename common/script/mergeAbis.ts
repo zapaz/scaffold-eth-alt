@@ -8,7 +8,7 @@ const readJSON = async (filePath: string) => {
 };
 
 const writeJSON = async (filePath: string, data: unknown, options: { spaces: number }) => {
-  const json = JSON.stringify(data, null, options.spaces);
+  const json = JSON.stringify(data, null, options.spaces) + `\n`;
   await fs.promises.writeFile(filePath, json, "utf-8");
 };
 
