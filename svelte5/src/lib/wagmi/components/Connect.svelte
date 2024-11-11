@@ -70,16 +70,16 @@
     <h3 class="mb-3 text-xl font-bold text-center">Connect Wallet</h3>
     <label for="connect-modal" class="btn btn-circle btn-ghost btn-sm absolute right-3 top-3 text-xl"> &times; </label>
     <ul class="space-y-4 text-center">
-      {@render connectBlock("injected")}
-      {@render connectBlock("metaMask")}
-      {@render connectBlock("coinbaseWallet")}
-      {@render connectBlock("walletConnect")}
-      <!-- {@render connectBlock(safe, "Safe Wallet")} -->
+      {@render connectSnippet("injected")}
+      {@render connectSnippet("metaMask")}
+      {@render connectSnippet("coinbaseWallet")}
+      {@render connectSnippet("walletConnect")}
+      <!-- {@render connectSnippet(safe, "Safe Wallet")} -->
     </ul>
   </label>
 </label>
 
-{#snippet connectBlock(connectorName: string)}
+{#snippet connectSnippet(connectorName: string)}
   {@const connectorMap = connectorsMap.get(connectorName)}
   {#if connectorMap}
     <li class="flex align-center">
