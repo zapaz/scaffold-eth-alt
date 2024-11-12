@@ -59,7 +59,7 @@
     "vercel": "vercel"
   },
   "type": "module",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "devDependencies": {
     "globals": "^15.12.0",
     "typescript-eslint": "^8.14.0"
