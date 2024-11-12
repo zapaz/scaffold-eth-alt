@@ -1,9 +1,28 @@
 {
   "extends": ["//"],
   "tasks": {
-    "build": {
-      "dependsOn": ["check", "@scaffold-eth-alt/foundry#build"],
-      "inputs": ["src/**", "**/*.json"],
+    "format": {
+      "dependsOn": ["@scaffold-eth-alt/common#build"],
+      "inputs": ["src/**"],
+      "outputLogs": "new-only"
+    },
+    "start": {
+      "dependsOn": ["@scaffold-eth-alt/foundry#deploy"],
+      "cache": false,
+      "persistent": true,
+      "inputs": ["src/**"],
+      "outputLogs": "new-only"
+    },
+    "dev": {
+      "cache": false,
+      "persistent": true,
+      "inputs": ["src/**"],
+      "outputLogs": "new-only"
+    },
+    "preview": {
+      "dependsOn": ["build"],
+      "cache": false,
+      "persistent": true,
       "outputLogs": "new-only"
     }
   }
