@@ -1,8 +1,8 @@
 import { type Address, type Chain, createPublicClient, createWalletClient, getContract, custom } from "viem";
 import type { WindowEthereum } from "../types";
 
-import addresses from "@scaffold-eth-alt/foundry/addresses.json";
-import { abi } from "@scaffold-eth-alt/foundry/out/Counter.sol/Counter.json";
+import addresses from "@scaffold-eth-svelte5/foundry/addresses.json";
+import { abi } from "@scaffold-eth-svelte5/foundry/out/Counter.sol/Counter.json";
 
 const counter = async (chain: Chain) => {
   if (!window) throw new Error("Not in browser");

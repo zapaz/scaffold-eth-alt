@@ -2,7 +2,7 @@
   "extends": ["//"],
   "tasks": {
     "build": {
-      "dependsOn": ["check", "@scaffold-eth-alt/foundry#deploy"],
+      "dependsOn": ["check", "@scaffold-eth-svelte5/foundry#deploy"],
       "inputs": ["../foundry/addresses.json"],
       "outputLogs": "new-only"
     }

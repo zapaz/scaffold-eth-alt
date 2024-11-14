@@ -1,6 +1,6 @@
 import { type Abi } from "abitype";
 import { type Address } from "viem";
-import { type DeploymentContractName, readDeploymentContract } from "@scaffold-eth-alt/common";
+import { type DeploymentContractName, readDeploymentContract } from "@scaffold-eth-svelte5/common";
 import { createTargetNetworkId } from "$lib/scaffold-eth/runes";
 import { createPublicClient, createAccount } from "$lib/wagmi/runes";
 

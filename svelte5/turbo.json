@@ -2,12 +2,12 @@
   "extends": ["//"],
   "tasks": {
     "format": {
-      "dependsOn": ["@scaffold-eth-alt/common#build"],
+      "dependsOn": ["@scaffold-eth-svelte5/common#build"],
       "inputs": ["src/**"],
       "outputLogs": "new-only"
     },
     "start": {
-      "dependsOn": ["@scaffold-eth-alt/foundry#deploy"],
+      "dependsOn": ["build"],
       "cache": false,
       "persistent": true,
       "inputs": ["src/**"],

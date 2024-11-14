@@ -1,6 +1,6 @@
 <script lang="ts">
   import { replacer } from "$lib/scaffold-eth/ts";
-  import type { DeploymentContractName } from "@scaffold-eth-alt/common";
+  import type { DeploymentContractName } from "@scaffold-eth-svelte5/common";
   import { createContract, createEvents } from "$lib/wagmi/runes";
 
   const { contractName, hidden }: { contractName: string; hidden: boolean } = $props();

@@ -1,5 +1,5 @@
 {
-  "name": "@scaffold-eth-alt/foundry",
+  "name": "@scaffold-eth-svelte5/foundry",
   "version": "0.1.2",
   "description": "",
   "main": "index.js",
@@ -9,6 +9,7 @@
     "chain": "./anvil.sh",
     "check": "pnpx solhint src/**/*.sol",
     "clean": "rm -rf node_modules .turbo out broadcast cache",
+    "deploy": "pnpm run deploy:anvil",
     "deploy:all": "forge script script/DeployAll.s.sol",
     "deploy:anvil": "export CHAIN=anvil ACCOUNT=anvil-deployer && pnpm run chain && pnpm deploy:deploy --password '' && pnpm run deploy:validate",
     "deploy:base": "CHAIN=base pnpm deploy:mainnet",

@@ -1,12 +1,12 @@
-# scaffold-eth-alt
+# scaffold-eth-svelte5
 
-[scaffold-eth-alt](https://github.com/zapaz/scaffold-eth-alt) is an alternative tech stack to [scaffold-eth-2](https://github.com/scaffold-eth/scaffold-eth-2) while using  [@ByteAtATime](https://github.com/ByteAtATime) Svelte components from [scaffold-eth-svelte](https://github.com/ByteAtATime/scaffold-eth-svelte)
+[scaffold-eth-svelte5](https://github.com/zapaz/scaffold-eth-svelte5) is an alternative tech stack to [scaffold-eth-2](https://github.com/scaffold-eth/scaffold-eth-2) while using  [@ByteAtATime](https://github.com/ByteAtATime) Svelte components from [scaffold-eth-svelte](https://github.com/ByteAtATime/scaffold-eth-svelte)
 
-Demo site on Fleek.xyz here => https://scaffold-eth-alt.on-fleek.app/
+Demo site on Fleek.xyz here => https://scaffold-eth-svelte5.on-fleek.app/
 
 Comparison of tech stacks:
 
-| Feature/Tool           | scaffold-eth-2                          | scaffold-eth-svelte                          | scaffold-eth-alt                |
+| Feature/Tool           | scaffold-eth-2                          | scaffold-eth-svelte                          | scaffold-eth-svelte5                |
 |------------------------|-------------------------------------------|-----------------------------------------|-----------------------------------------|
 | Package Manager        | [yarn](https://yarnpkg.com/)            | [yarn](https://yarnpkg.com/)                 | [pnpm](https://pnpm.io/)                  |
 | Task runner            | [yarn](https://yarnpkg.com/)            | [yarn](https://yarnpkg.com/)      | [turborepo](https://turborepo.org/)       |

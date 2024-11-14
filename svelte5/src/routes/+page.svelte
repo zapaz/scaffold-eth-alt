@@ -11,7 +11,7 @@
   <div class="px-5">
     <h1 class="text-center">
       <span class="mb-2 block text-2xl">Welcome to</span>
-      <span class="block text-4xl font-bold">Scaffold-ETH Alt</span>
+      <span class="block text-4xl font-bold">Scaffold-ETH Svelte5</span>
     </h1>
     <div class="flex items-center justify-center space-x-2">
       <p class="my-2 font-medium">Connected Address:</p>

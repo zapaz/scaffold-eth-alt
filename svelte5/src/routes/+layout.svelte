@@ -11,8 +11,8 @@
   const baseUrl = $derived(data.url || "");
 
   const metadata = $derived({
-    title: "Scaffold-ETH Alt App",
-    description: "Built with 🏗 Scaffold-ETH Alt",
+    title: "Scaffold-ETH Svelte5 App",
+    description: "Built with 🏗 Scaffold-ETH Svelte5",
     thumbnail: `${baseUrl}/thumbnail.jpg`,
     favicon: "/favicon.png"
   });

@@ -1,7 +1,7 @@
 {
-  "name": "scaffold-eth-alt",
+  "name": "scaffold-eth-svelte5",
   "version": "0.1.2",
-  "description": "Alternative stack to scaffold-eth with Svelte5, foundry, pnpm, turbo, vite and fleek.xyz",
+  "description": "Svelte5 alternative stack to scaffold-eth with foundry, pnpm, turbo, vite and fleek.xyz",
   "main": "index.js",
   "scripts": {
     "all": "pnpm run clean && pnpm install && pnpm run chain && pnpm run deploy && turbo start",

@@ -10,7 +10,7 @@
   "keywords": [],
   "license": "ISC",
   "main": "index.js",
-  "name": "@scaffold-eth-alt/common",
+  "name": "@scaffold-eth-svelte5/common",
   "scripts": {
     "build": "ts-node script/mergeAbis.ts",
     "check": "prettier --check . && eslint **/*.ts",
